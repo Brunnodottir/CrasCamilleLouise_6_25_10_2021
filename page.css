@@ -1,0 +1,465 @@
+body {
+    font-family: 'roboto', sans-serif;
+}
+
+header h1  a {
+    color: #901C1C;
+    font-size: 2.5rem;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    margin-left: 2rem;
+}
+
+
+#info-photographes
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: relative;
+    height: 11em;
+    margin: 20px;
+}
+
+.photographe-img
+{
+    height: 9rem;
+    width: 9rem;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius:50% ;
+    margin: 0 auto;
+    box-shadow: 0 0 .8rem rgba(134, 134, 134, 0.432);
+
+}
+
+.photographe-name
+{
+    color:#D3573C;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+
+}
+
+.photographe-loc
+{
+   color: #901C1C;
+   margin: 0;
+   font-weight: 400;
+   font-size: 13px;
+
+}
+
+.photographe-quote
+{
+    margin-top: 0.5em;
+    font-size: 10px;
+    margin-bottom: 0;
+}
+
+.photographe-tarif
+{
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    color: #757575;
+    font-weight: 400;
+    font-size: 9px;
+
+}
+
+.photographe-tags
+{
+    margin-top: 0.5em;
+}
+.photographe-tags span
+{
+
+
+
+    color: #901C1C;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+    border : 0.5px solid #C4c4c4;
+    box-sizing: border-box;
+    border-radius: 11px;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.2em 0.5em;
+    margin: 0 0.1em;
+
+}
+
+
+/*MAIN*/
+
+
+
+#medias
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.media__img
+{
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    overflow: hidden;
+
+}
+
+.media__infos
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+    #medias {
+      margin: 50px 100px 0 100px;
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      padding: 0;
+    }
+  }
+
+@media screen and (min-width: 1100px) {
+    #medias {
+      margin: 50px 100px 0 100px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+.next
+{
+    display: none;
+}
+
+.btn-form
+{
+    width: 170px;
+    background-color: #901C1C;
+    color: white;
+    position: fixed;
+    bottom: 1em;
+    left: 10em;
+    border-radius: 5px;
+    height: 35px;
+}
+
+.form-container
+{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #DB8876;
+  font-family: 'Open Sans', sans-serif;
+  padding-left: 20px;
+  display: none;
+ 
+
+}
+
+#name-photographe{font-weight: 400;}
+
+#close-button
+{
+    color: white;
+    
+    height: 20px;
+width: 20px;
+}
+
+.form-container label{
+    font-size: 24px;
+    color: #312E2E;
+    padding: 20px;
+
+}
+
+.form-container input{
+    border-radius: 5px;
+    height:50px ;
+    width: 330px;
+    border: none;
+}
+
+ .mymessage{
+     padding-bottom: 60px;
+ }
+
+ .form-container button
+ {height: 35px;
+    width: 170px;
+    left: 97px;
+    top: 702px;
+    border-radius: 5px;
+    background: #901C1C;
+    color: white;
+    margin-left: 25%;}
+
+    .sum-price-likes {
+        display: none;
+      }
+      .sum-price-likes,
+      .sort-media {
+        display: none;
+      }
+ 
+      
+.dropdowns{
+    display: none;
+}
+
+ @media screen and (min-width : 768px) {
+
+    #info-photographes
+    {
+        background: #FAFAFA;
+        padding: 20px;
+
+    }
+
+    #info-photographes p, h2{
+        padding: 5px
+    }
+
+    .dropdowns {
+        display: flex;
+        position: relative;
+        margin-left: 100px;
+        margin-top: 50px;
+        align-items: center;
+      }
+      
+      .dropdowns p {
+        padding: 10px;
+      }
+      
+      #app-cover {
+        width: 150px;
+        height: 42px;
+      }
+      
+      #select-button {
+        position: relative;
+        height: 16px;
+        padding: 12px 14px;
+        background-color: #901C1C;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      #options-view-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 3;
+      }
+      
+      #selected-value {
+        font-size: 16px;
+        line-height: 1;
+        margin-right: 26px;
+      }
+      
+      .option i {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        left: 14px;
+        padding: 0;
+        display: none;
+      }
+      
+      .option,
+      .label {
+        color: white;
+        font-size: 16px;
+      }
+      
+      #chevrons {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 12px;
+        padding: 14px;
+      }
+      
+      #chevrons i {
+        display: block;
+        height: 50%;
+        color: white;
+        font-size: 12px;
+        text-align: right;
+      }
+      
+      #options {
+        position: absolute;
+        width: 148px;
+        margin: 0 auto;
+        background-color: solid #901C1C;
+        border-radius: 4px;
+      }
+      
+      #options-view-button:checked ~ #options {
+        border: 1px solid #901C1C;
+        border-color: solid #901C1C;
+      }
+      
+      .option {
+        position: relative;
+        line-height: 1;
+        transition: 0.3s ease all;
+        z-index: 2;
+        background: #901C1C;
+      }
+      
+      #options-view-button:checked ~ #options .option i {
+        display: block;
+        padding: 12px 0;
+      }
+      
+      .label {
+        display: none;
+        padding: 0;
+        border-bottom: 0.5px solid rgb(255, 255, 255, 0.5);
+      }
+      
+      #options-view-button:checked ~ #options .label {
+        display: block;
+        padding: 12px 14px;
+      }
+      
+      .s-c {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        top: 0;
+      }
+      
+      input[type='radio'] {
+        position: absolute;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        margin: 0;
+        opacity: 0;
+        cursor: pointer;
+      }
+      
+      .s-c:hover {
+        height: 100%;
+        z-index: 1;
+      }
+      
+      .opt-val {
+        position: absolute;
+        left: 14px;
+        width: 217px;
+        height: 21px;
+        opacity: 0;
+        transform: scale(0);
+      }
+      
+      .option input[type='radio']:checked ~ .opt-val {
+        opacity: 1;
+        transform: scale(1);
+      }
+      
+      .option input[type='radio']:checked ~ .label {
+        color: white;
+      }
+      
+      .option input[type='radio']:checked ~ .label:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+      }
+      
+      #options-view-button:not(:checked) ~ #options .option input[type='radio']:checked ~ .opt-val {
+        top: -30px;
+      }
+      
+      .option:nth-child(1) input[type='radio']:checked ~ .opt-val {
+        top: -31px;
+      }
+      
+      .option:nth-child(2) input[type='radio']:checked ~ .opt-val {
+        top: -71px;
+      }
+      
+      .option:nth-child(3) .label {
+        border-bottom: none;
+      }
+      
+      .option:nth-child(3) input[type='radio']:checked ~ .opt-val {
+        top: -111px;
+      }
+      
+      #option-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 40px;
+        transition: 0.3s ease all;
+        z-index: 1;
+        display: none;
+      }
+
+
+
+
+    #btn-form {
+        position: relative
+
+    }
+
+    .sum-price-likes {
+        position: fixed;
+        background-color: #DB8876;
+        bottom: 0;
+        display: flex;
+        padding: 15px;
+        border-radius: 5px 5px 0px 0px;
+        font-size: 24px;
+        right: 0;
+        height: 20px;
+      }
+
+     
+    
+      .total-likes {
+        display: flex;
+        margin-right: 30px;
+      }
+
+      
+    }
+ 

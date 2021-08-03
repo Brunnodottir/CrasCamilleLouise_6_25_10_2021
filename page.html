@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="utf-8"/>
+<title>FishEye</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="page.css">
+<link rel="icon" type="image/png" href="fisheye.png" />
+</head>
+
+<body>
+
+
+    <!--HEADER-->
+<header>
+    <h1><a href="index.html"> Fish<i class="fas fa-camera"></i>ye</a></h1>
+
+</header>
+
+
+<!--BODY-->
+<main>
+
+  
+</main>
+
+
+<!--PROFIL-->
+ 
+
+    <div id="medias">
+    <img class="media__img" href="#" src="Sample Photos/Mimi/Animals_Rainbow.jpg" >
+    <div class="media__infos">
+        <p class ="media__infos__name">Oiseau bleu</p>
+        <i class="fas fa-heart"></i>
+        <p class="media__infos__likes">12</p>
+
+    </div>
+</div>
+
+<div id="medias">
+    <img class="media__img" href="#" src="Sample Photos/Mimi/Animals_Rainbow.jpg" >
+    <div class="media__infos">
+        <p class ="media__infos__name">Oiseau bleu</p>
+        <i class="fas fa-heart"></i>
+        <p class="media__infos__likes">12</p>
+
+    </div>
+</div>
+
+<div id="medias">
+    <img class="media__img" href="#" src="Sample Photos/Mimi/Animals_Rainbow.jpg" >
+    <div class="media__infos">
+        <p class ="media__infos__name">Oiseau bleu</p>
+        <i class="fas fa-heart"></i>
+        <p class="media__infos__likes">12</p>
+
+    </div>
+</div>
+
+
+
+ <!--Script-->
+
+  
+
+
+
+ 
+ <!--Photos-->
+
+<!-- Lightbox / SCRIPT -->
+
+    <div class="lightbox__container">
+            <i class="lightbox__close fas fa-times closeIcon"></i>
+            <i class="lightbox__prev fas fa-chevron-left leftIcon"></i>
+            <i class="lightboc__next fas fa-chevron-right rightIcon"></i>
+            <div id="photographers-photos"></div>
+            <div id="photo">Name</div>
+    </div>
+</div>
+
+<!--BOUTON CONTACT-->
+<button class="btn-form">
+Contactez-moi  </button><!--CONTACT FORM-->
+
+<div class="form-container">
+
+
+
+<h1 id="name-photographe">Mimi Keel</h1>
+<form>
+    <p id="close-button"><i class="fas fa-times"></i></p>
+
+    <label>Prénom<input id="prenom" type="text"></label><br>
+    <p class="error" id="error-prenom"></p>
+
+    <label>Nom<input id="nom" type="text"></label><br>
+    <p class="error" id="error-nom"></p>
+
+    <label>Email<input id="email" type="text"></label><br>
+    <p class="error" id="error-email"></p>
+
+    <label>Votre message<input class="mymessage"  id="message" type="text" class="votre-message"></label><br>
+    <p class="error" id="error-message"></p>
+
+    <button id = "btn-submit">Envoyer</button>
+
+</form>
+
+</div>
+
+
+<!--CONFIRMATION-->
+
+
+
+
+
+  <div class="dropdowns">
+    <p>Trier par</p>
+    <form id="app-cover">
+      <div id="select-box">
+        <input type="checkbox" id="options-view-button" />
+        <div id="select-button">
+          <div id="chevrons">
+            <!-- <i class="fas fa-chevron-up"></i> -->
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+        <div id="options">
+          <div class="option">
+            <input class="s-c top" type="radio" name="platform" value="popularity" checked />
+            <span class="label">Popularité</span>
+            <span class="opt-val">Popularité</span>
+          </div>
+
+          <div class="option">
+            <input class="s-c top" type="radio" name="platform" value="date" />
+            <span class="label">Date</span>
+            <span class="opt-val">Date</span>
+          </div>
+
+          <div class="option">
+            <input class="s-c top" type="radio" name="platform" value="title" />
+            <span class="label">Titre</span>
+            <span class="opt-val">Titre</span>
+          </div>
+          <div id="option-bg"></div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div id="medias"></div> <!--LIGHTBOX-->
+
+
+
+  <div class="sum-price-likes">
+    <div class="total-likes">
+      <p class="total-likes__sum"></p>
+      <i class="fas fa-heart" aria-label="likes"></i>
+    </div>
+    <p id="sum-price-likes__price"></p>
+</div>
+</main>
+
+
+
+<script src="/FishEye/modal.js"></script>
+<script src="/FishEye/page.js" type="module"></script>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+
+<script src="/FishEye/modal.js"></script>
+
+
