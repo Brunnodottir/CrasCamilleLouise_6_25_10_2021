@@ -18,8 +18,12 @@ class Photographe {
     }
 
     render(){
-        const container = document.createElement("div");
+        const container = document.createElement("a");
         container.className = "main-photographes";
+        container.title = "Page-photographe";  
+        container.href = "/page.html";
+        document.body.appendChild(container);  
+     
         const img = document.createElement('img');
         img.src = "Sample Photos/Photographers ID Photos/" + this.portrait;
         img.className = "photographe-img";
@@ -37,9 +41,6 @@ class Photographe {
         pprice.textContent = this.price;
         const ptags = document.createElement("div");
         ptags.className = "photographe-tags";
-        // const span = document.createElement ("span");
-        // span.className ="firsttag";
-        // span.textContent = this.tags;
         
         container.append(img, h2, loc, quote, pprice, ptags);
         for (let i = 0 ; i < this.tags.length ; i++) {
@@ -84,17 +85,6 @@ fetch('/data_photographers.json')
 
 // const PhotographerNikolic = new Photographe("Marcel Nikolic", "195", "Berlin", "Germany", ["travel", "architecture"], "Toujours à la recherche de LA photo", "300€", "MarcelNikolic.jpg" );
 // PhotographerNikolic.render();
-
-
-
-
-
-
-// CLASSE PHOTOGRAPHE DEUXIEME RENDER
-//PAGE SECONDAIRE
-// class photographe +
-
-//class Photographie 
 
 
 
