@@ -1,7 +1,7 @@
 
 
 
-//////
+////// TEMPLATE PHOTOGRAPHERS
 
 class Photographe {
     constructor(nom, id, city, country, tags, quote, price, portrait) {
@@ -63,34 +63,10 @@ fetch('/data_photographers.json')
 
         for (let i = 0 ; i < photographList.length ; i++) {
           console.log(photographList[i]);
-          const photographer = new Photographe( photographList[i].name, "450", "London", "UK", ["travel", "portrait"], "Voir le beau dans le quotidien","500£", "MimiKeel.jpg" );
+          const photographer = new Photographe( photographList[i].name, photographList[i].id, photographList[i].city, photographList[i].country, photographList[i].tags, " ' " + photographList[i].tagline + " ' ",photographList[i].price + "€", photographList[i].portrait );
             photographer.render();
         }
     });
-
-// const PhotographerMimiKeel = new Photographe( "Mimi Keel", "450", "London", "UK", ["travel", "portrait"], "Voir le beau dans le quotidien","500£", "MimiKeel.jpg" );
-// PhotographerMimiKeel.render();
-
-// const PhotographerWilkens = new Photographe("Ellie-Rose Wilkens", "930", "Paris", "France", ["sports","architecture"], "Capturer des compositions complexes", "250€", "EllieRoseWilkens.jpg")
-// PhotographerWilkens.render();
-
-// const PhotographerGalindo = new Photographe("Tracy Galindo", "82", "Montreal", "Canada", ["art","fashion", "events"], "Photographe freelance", "500$", "TracyGalindo.jpg");
-// PhotographerGalindo.render();
-
-// const PhotographerBradford = new Photographe("Nabeel Bradford", "527", "Mexico City", "Mexico", ["sports"], "Toujours aller de l'avant", "350$", "NabeelBradford.jpg" );
-// PhotographerBradford.render();
-
-// const PhotographerDubois = new Photographe("Rhode Dubois", "925", "Barcelona", "Spain", ["sports", "fashion", "events"], "Je crée des souvenirs", "275€", "RhodeDubois.jpg" );
-// PhotographerDubois.render();
-
-// const PhotographerNikolic = new Photographe("Marcel Nikolic", "195", "Berlin", "Germany", ["travel", "architecture"], "Toujours à la recherche de LA photo", "300€", "MarcelNikolic.jpg" );
-// PhotographerNikolic.render();
-
-
-
-
-
-
 
 
 

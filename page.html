@@ -64,22 +64,33 @@ Contactez-moi  </button><!--CONTACT FORM-->
 
 
 
-<h1 id="name-photographe">Mimi Keel</h1>
-<form>
-    <p id="close-button"><i class="fas fa-times"></i></p>
+<h1 id="nameofphotographer"></h1>
+<form name="reserve"
+method="get"
+id="form"
+novalidate>
+    <p id="btnClose"><i class="fas fa-times"></i></p>
 
-    <label>Prénom<input id="prenom" type="text"></label><br>
+    <div class="formData">
+    <label>Prénom<input id="prenom" type="text" minlength = "2"></label><br>
     <p class="error" id="error-prenom"></p>
+  </div>
+  <div class="formData">
 
     <label>Nom<input id="nom" type="text"></label><br>
     <p class="error" id="error-nom"></p>
+  </div>
+    <div class="formData">
 
     <label>Email<input id="email" type="text"></label><br>
-    <p class="error" id="error-email"></p>
+    <p class="error" id="error-email" placeholder="myemail@email.com"></p>
+    </div>
+    
+    <div class="formData">
 
-    <label>Votre message<input class="mymessage"  id="message" type="text" class="votre-message"></label><br>
+    <label>Votre message<input class="mymessage"  id="message" type="text" class="votre-message" placeholder="Votre message"></label><br>
     <p class="error" id="error-message"></p>
-
+</div>
     <button id = "btn-submit">Envoyer</button>
 
 </form>
@@ -143,8 +154,8 @@ Contactez-moi  </button><!--CONTACT FORM-->
 
 
 
-<script src="./modal.js"></script>
 <script src="./main_photographer.js"></script>
+<script src="./modal.js"></script>
 
 
 </body>
@@ -169,6 +180,5 @@ Contactez-moi  </button><!--CONTACT FORM-->
 
 </html>
 
-<script src="/FishEye/modal.js"></script>
 
 
