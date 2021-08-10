@@ -1,6 +1,5 @@
 
 
-
 ////// TEMPLATE PHOTOGRAPHERS
 
 class Photographe {
@@ -21,7 +20,7 @@ class Photographe {
         const container = document.createElement("a");
         container.className = "main-photographes";
         container.title = "Page-photographe";  
-        container.href = "/page.html";
+        container.href = "/page.html?"+this.id; //+ this.id// OR SEARCH PARAMS OR ?id=${photographer.id}
         document.body.appendChild(container);  
      
         const img = document.createElement('img');
@@ -49,6 +48,7 @@ class Photographe {
             span.textContent = this.tags[i];
             container.append(span);
         }
+        
 
         
         document.querySelector("main").append(container);
@@ -62,14 +62,30 @@ fetch('/data_photographers.json')
         const photographList = result.photographers;
 
         for (let i = 0 ; i < photographList.length ; i++) {
-          console.log(photographList[i]);
+          console.log(photographList);
           const photographer = new Photographe( photographList[i].name, photographList[i].id, photographList[i].city, photographList[i].country, photographList[i].tags, " ' " + photographList[i].tagline + " ' ",photographList[i].price + "€", photographList[i].portrait );
             photographer.render();
+            
         }
+
+
     });
 
+const getPhotographerId=()=>{
+    fetch('/data_photographers.json')
+    .then(data => data.json())
+    .then(result => {
+        const photographList = result.photographers;
+
+        for (let i = 0 ; i < photographList.length ; i++) {
+          const photographerID = ( photographList[i].id);
+            console.log(photographerId);
+        }
 
 
+    });
+
+}
 
 
 

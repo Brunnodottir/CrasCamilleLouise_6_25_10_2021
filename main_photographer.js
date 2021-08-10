@@ -1,4 +1,28 @@
-// PROFIL PHOTOGRAPHERS
+// RECUP ID dans l'URL // WINDOW.LOCATION
+
+const queryParam_url_id = window.location.search;
+console.log(queryParam_url_id); //??id
+
+//extraire l'ID sans le ?
+
+const useId = queryParam_url_id.slice(1);
+console.log(useId);
+
+
+// afficher un objet avec la key ID
+
+// fetch + id ?
+// find() + callback
+
+
+
+
+
+
+
+
+
+// Afficher PROFIL PHOTOGRAPHERS
 class Photographe {
     constructor(nom, id, city, country, tags, quote, price, portrait) {
         this.name = nom;
@@ -72,12 +96,12 @@ class Media {
     render() {
         const container = document.createElement("a");
         container.className = "medias";
-        container.title = "Lightbox";
-        container.href ="#";
+
         document.body.appendChild(container);  
 
         const img = document.createElement('img');
         img.src = "Sample Photos/" +this.image;
+        // img.style.backgroundIMage = `url(${url})`
         img.className = "media__img";
         const containerI = document.createElement("div");
         containerI.className = "media__infos";
@@ -103,7 +127,6 @@ class Media {
 
 
 
-
         
     }
 }
@@ -125,13 +148,26 @@ class Media {
 
 
 
-
-
 // TRIER PAR
 
 
+tableauDesTags = [
+    portrait,
+    art,
+    fashion,
+    architecture,
+    travel,
+    sport,
+    animals,
+    events,
+  ];
 
 
+//afficher seuelement les photographes ayant le même tag
+const affichageParTag = async () => {
+  await triPhotographe();
+  console.log(tableauDesTags);
+};
 
 //LIGHTBOX
 
