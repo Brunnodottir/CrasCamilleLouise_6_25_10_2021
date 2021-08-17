@@ -1,148 +1,152 @@
+import {Photographe} from "./class/Photographe.js";
+import {Media, Image, Video} from "./class/media.js";
+
 // RECUP ID dans l'URL // WINDOW.LOCATION
+
+
 
 const queryParam_url_id = window.location.search;
 console.log(queryParam_url_id); //??id
 
-//extraire l'ID sans le ?
+const url = new URL(window.location);
+const searchParams = new URLSearchParams(url.search);
+const useId = Number(searchParams.get("id"));
+const photographerElement = document.querySelector('#photographer');
+const photographerPrice = document.getElementById('sum-price-likes__price');
 
-const useId = queryParam_url_id.slice(1);
-console.log(useId);
+const imageVideoList = [] // créé un nouveau tableau pour manipuler les médias
+
 
 
 // afficher un objet avec la key ID
 
-// fetch + id ?
-// find() + callback
+fetch('/data_photographers.json')
+    .then(data => data.json())
+    .then(result => {
+        const photographList = result.photographers;
+        console.log(photographList);
 
-
-
-
-
-
-
-
-
-// Afficher PROFIL PHOTOGRAPHERS
-class Photographe {
-    constructor(nom, id, city, country, tags, quote, price, portrait) {
-        this.name = nom;
-        this.firstname = nom.split(" ")[0];
-        this.lastname = nom.split(" ") [1];
-        this.id = id;
-        this.city = city;
-        this.country = country;
-        this.tags = tags;
-        this.quote = quote;
-        this.price = price;
-        this.portrait = portrait;
-    }
-
-    render(){
-        const container = document.createElement("div");
-        container.className = "main-photographes";
-        const img = document.createElement('img');
-        img.src = "Sample Photos/Photographers ID Photos/" + this.portrait;
-        img.className = "photographe-img";
-        const h2 = document.createElement("h2");
-        h2.className = "photographe-name";
-        h2.textContent = this.name;
-        const loc = document.createElement ("p");
-        loc.className = "photographe-loc";
-        loc.textContent = this.city +', '+ this.country;
-        const quote = document.createElement("p");
-        quote.className ="photographe-quote";
-        quote.textContent = this.quote;
-        const pprice = document.createElement ("p");
-        pprice.className ="photographe-tarif";
-        pprice.textContent = this.price;
-        const ptags = document.createElement("div");
-        ptags.className = "photographe-tags";
-        const span = document.createElement ("span");
-        span.className ="firsttag";
-        span.textContent = this.tags;
+        
         
 
-        container.append(img, h2, loc, quote, pprice, ptags, span);
-        document.querySelector("main").append(container);
-        for (let i = 0 ; i < this.tags.length ; i++) {
-            const span = document.createElement ("span");
-            span.className ="firsttag";
-            span.textContent = this.tags[i];
-            container.append(span);
+
+        const activePhotographer = photographList.filter(photographers => photographers.id === useId)[0];
+        console.log(activePhotographer);
+        const photographerDetail = new Photographe(activePhotographer.name, activePhotographer.id, activePhotographer.city,activePhotographer.country, activePhotographer.tags, activePhotographer.quote, activePhotographer.price, activePhotographer.portrait);
+        photographerDetail.render();
+
+
+
+        // if (activePhotographer) {
+        //   // appel la class et le rendu
+        //   const myPhotographer = new Photographe( photographList.name, photographList.id, photographList.city);
+        //   console.log(myPhotographer);
+        // }
+        
+                
+        //add catch error//
+
+       const mediaList = result.media;
+       console.log(mediaList);
+
+        const activeMedia = mediaList.filter(media => media.photographerId === useId);
+        console.log(activeMedia);
+
+        activeMedia.forEach(element => { 
+            const firstName = photographerDetail.name.split(" ")[0];
+            console.log(firstName);
+            
+//add function if Image =>
+        if (element.image){
+            const mediaSrc = `Sample Photos/${firstName}/${element.image}`;
+
+            const newMedia = new Image(element.id,element.photographerId, element.title, mediaSrc, element.tags, element.likes, element.date, element.price);
+            newMedia.render();
+            imageVideoList.push(newMedia); //ajoute les nouvelles données au tableau créé 
+
+          
+            
+        }else{ 
+            const mediaSrc = `Sample Photos/${firstName}/${element.video}`;
+
+            const newMedia = new Video(element.id,element.photographerId, element.title, mediaSrc, element.tags, element.likes, element.date, element.price);
+            // newMedia.render();
+            imageVideoList.push(newMedia); //ajoute les nouvelles données au tableau créé 
+
+
         }
+        
 
-    }
-}
-
-const PhotographerMimiKeel = new Photographe( "Mimi Keel", "450", "London", "UK", ["travel", "portrait"], "Voir le beau dans le quotidien","500£", "MimiKeel.jpg" );
-PhotographerMimiKeel.render();
-
-
-/// TEMPLATE MEDIAS
+           
+        
+      
 
 
-class Media {
-    constructor(id, photographerId, title, image, tags, likes, date, price ) {
-        this.id = id;
-        this.photographerId = photographerId;
-        this.title = title;
-        this.image = image;
-        this.tags = tags;
-        this.likes = likes;
-        this.date = date;
-        this.price = price;
-    }
-
-    render() {
-        const container = document.createElement("a");
-        container.className = "medias";
-
-        document.body.appendChild(container);  
-
-        const img = document.createElement('img');
-        img.src = "Sample Photos/" +this.image;
-        // img.style.backgroundIMage = `url(${url})`
-        img.className = "media__img";
-        const containerI = document.createElement("div");
-        containerI.className = "media__infos";
-        const pname = document.createElement("p");
-        pname.className = "media__infos__name"
-        pname.textContent = this.title;
-        const containerL = document.createElement("div");
-        containerL.className ="media__likes"
-        const plikes = document.createElement("p");
-        plikes.className = "media__infos__likes";
-        plikes.textContent =this.likes;
-        const ilike = document.createElement("i");
-        ilike.className ="fas fa-heart";
+        
+        });
+        
+        
 
 
-
-        container.append(img,containerI);
-        containerI.append(pname, containerL);
-        containerL.append(plikes, ilike);
     
+    });
 
-    document.querySelector("main").append(container);
+
+
+
+
+
+
+
+// }
+
+// // AFFICHE LES MEDIAS
+// const photographerDetail = activePhotographer.filter( Photographe => activePhotographer === parseInt(urlId));
+
+
+// FROM USEID => GET MEDIALIST
+// const useId = Number(searchParams.get("id"));
 
 
 
         
-    }
-}
+        
+        
+        // const activeMedia = mediaList.find((element)=>element.photographerId === mediasId);
+        // console.log(mediasId);
+
+        //add catch error//
+   
+
+// const test = new Media (342550, 82, "Fashion Yellow Beach", "MimiKeel.jpg", ["fashion"], 62, "2011-12-08", 55 );
+// test.render();
+
+// const test2 = new Media (342550, 82, "Fashion Yellow Beach", "MimiKeel.jpg", ["fashion"], 62, "2011-12-08", 55 );
+
+// test2.render();
 
 
 
 
-    
+// AFFICHE LES MEDIAS SI IMAGE OU VIDEO
 
-// function imageOrVideo(image,video,){
-//     if ('image' in media){
-//         return
-//     }
-//     else if ('video' in media )
-//     return 
+
+
+// // funct imageOrVideo
+// // if(!!media.image){
+//   return createImage(media);
+//   }
+//   if(!!media.video){
+// //     return createVideo(media);
+//   }
 // }
+
+
+// funct CREATE Image
+// return
+// funct CREATE Video
+// return
+
 
 
 
@@ -151,23 +155,23 @@ class Media {
 // TRIER PAR
 
 
-tableauDesTags = [
-    portrait,
-    art,
-    fashion,
-    architecture,
-    travel,
-    sport,
-    animals,
-    events,
-  ];
+// tableauDesTags = [
+//     portrait,
+//     art,
+//     fashion,
+//     architecture,
+//     travel,
+//     sport,
+//     animals,
+//     events,
+//   ];
 
 
-//afficher seuelement les photographes ayant le même tag
-const affichageParTag = async () => {
-  await triPhotographe();
-  console.log(tableauDesTags);
-};
+// //afficher seuelement les photographes ayant le même tag
+// const affichageParTag = async () => {
+//   await triPhotographe();
+//   console.log(tableauDesTags);
+// };
 
 //LIGHTBOX
 
