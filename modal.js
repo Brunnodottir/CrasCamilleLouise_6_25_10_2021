@@ -47,14 +47,13 @@ function closeModal() {
 
 
 // GET NAME OF PHOTOGRAPHER
-const h1 = document.querySelector("modal h1");
-console.log(h1);
- fetch('/data_photographers.json')
-    .then(res => res.json()
+
+const nameOfPhotographer= document.getElementById('nameofphotographer')
+fetch('/data_photographers.json')
+    .then(data => data.json())
     .then(data => {
-        h1.innerHTML = data[0].id;
-    }));
-   
+      nameOfPhotographer.innerHTML = data.name;
+    })
     
 
 //VALIDATION
