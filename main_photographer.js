@@ -79,29 +79,52 @@ fetch('/data_photographers.json')
         
 
 
-        const btnHeart = document.querySelectorAll('.media_likes');
+        const btnHeart = document.querySelectorAll('.fa-heart');
         const nbrLike = document.querySelectorAll('.media_numberoflikes');
         const likeTotal = document.querySelectorAll('#sum-price-likes__price');
+        const value = nbrLike.innerHTML;
+
+          // définir valeur du like (media.likes)
+      
+          // définir la valeur de tous les likes du photographe (addition de tous les likes media)
+
         
+    //     function incrementBtn(like){
+    //         this.likes.push(like);
+    //         let sum = 0;
+    //         for(let like of this.likes){
+    //         sum += like;
+        
+    //     }
+    // }
+        //     
+        //    
+        //
+
+        
+      
+
         btnHeart.forEach((like) => {
-            const photographerLikes = photographerDetail.likes; // calculer tout les likes media //
-            console.log(photographerLikes);
+            const mediaLikes = activeMedia.likes; // calculer tout les likes media //
+            console.log(mediaLikes);
         
             like.addEventListener("click", function(){
                 console.log("<3");
-                // likeIncrease(heart, likeTotal) appel de la fonction pour rajouter en html et au like total
-
-
-        
+                // 
+                // incrementBtn();
+            
                 
         })
 
-        // // function likeIncrease (clic, likeTot) { fonction pour rajouter en html et au like total + refroidissement page
 
-        // }
-        
-        
+
+
+       
         })
+
+        
+        
+        
 
     
     });
