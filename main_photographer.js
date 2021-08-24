@@ -16,7 +16,20 @@ const photographerPrice = document.getElementById('sum-price-likes__price');
 
 const imageVideoList = []; // créé un nouveau tableau pour manipuler les médias
 
+export function getTotalLike() {
+    let sum = 0;
+    imageVideoList.forEach((media) => {
+        sum = sum + media.likes;
+    });
 
+    return sum;
+}
+
+export function updateTotalLike(value){
+    const totalLikesElement = document.querySelector('.total-likes__sum');
+
+    totalLikesElement.textContent = value;
+}
 
 // afficher un objet avec la key ID
 
@@ -66,71 +79,25 @@ fetch('/data_photographers.json')
 
         }
         
-
-           
-        // const photographerPrice = photographerDetail.price;
-        // console.log(photographerPrice);
-      
-
-
         
         });
-        
-        
-
-
-        const btnHeart = document.querySelectorAll('.fa-heart');
-        const nbrLike = document.querySelectorAll('.media_numberoflikes');
-        const likeTotal = document.querySelectorAll('#sum-price-likes__price');
-        const value = nbrLike.innerHTML;
-
-          // définir valeur du like (media.likes)
-      
-          // définir la valeur de tous les likes du photographe (addition de tous les likes media)
-
-        
-    //     function incrementBtn(like){
-    //         this.likes.push(like);
-    //         let sum = 0;
-    //         for(let like of this.likes){
-    //         sum += like;
-        
-    //     }
-    // }
-        //     
-        //    
-        //
-
-        
-      
-
-        btnHeart.forEach((like) => {
-            const mediaLikes = activeMedia.likes; // calculer tout les likes media //
-            console.log(mediaLikes);
-        
-            like.addEventListener("click", function(){
-                console.log("<3");
-                // 
-                // incrementBtn();
-            
-                
-        })
-
-
-
-
-       
-        })
 
         
         
         
+
+
+
+        
+        
+    
 
     
     });
 
 
-// TRIER PAR
+// TRIER PAR //select options// sort
+
 
 
 // tableauDesTags = [
@@ -152,7 +119,9 @@ fetch('/data_photographers.json')
 // };
 
 //LIGHTBOX
-
+// méthodes de navigation et open/close
+// class Lightbox
+// + render
 
 
 
