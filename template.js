@@ -48,3 +48,21 @@ window.addEventListener("scroll", function(){
 		btnContentUp.style.display = "none";
 	}
 }, false);
+
+
+// TRIER PAR //select options// sort
+
+
+
+const tableauDesTags = [
+    portrait,
+    art,
+    fashion,
+    architecture,
+    travel,
+    sport,
+    animals,
+    events,
+ ];
+ tableauDesTags.sort();
+ console.log(tableauDesTags);

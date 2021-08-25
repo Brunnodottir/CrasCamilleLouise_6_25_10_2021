@@ -1,5 +1,6 @@
 import {Photographe} from "./class/Photographe.js";
-import {Media, Image, Video} from "./class/media.js";
+import {Media, Image, Video, Lightbox} from "./class/media.js";
+
 
 // RECUP ID dans l'URL // WINDOW.LOCATION
 
@@ -31,6 +32,7 @@ export function updateTotalLike(value){
     totalLikesElement.textContent = value;
 }
 
+
 // afficher un objet avec la key ID
 
 fetch('/data_photographers.json')
@@ -47,6 +49,7 @@ fetch('/data_photographers.json')
         // console.log(activePhotographer);
         const photographerDetail = new Photographe(activePhotographer.name, activePhotographer.id, activePhotographer.city,activePhotographer.country, activePhotographer.tags, activePhotographer.tagline, activePhotographer.price, activePhotographer.portrait);
         photographerDetail.render();
+        
 
 
        const mediaList = result.media;
@@ -57,7 +60,12 @@ fetch('/data_photographers.json')
 
         activeMedia.forEach(element => { 
             const firstName = photographerDetail.name.split(" ")[0];
+            const price = photographerDetail.price;
             // console.log(firstName);
+            console.log(price);
+            const getPrice = document.getElementById("sum-price-likes__price");
+            getPrice.textContent = price + "€";
+
             
 //add function if Image =>
         if (element.image){
@@ -78,8 +86,10 @@ fetch('/data_photographers.json')
 
 
         }
-        
-        
+       
+        const newLightbox = new Lightbox (element.mediaList, element.title);
+        newLightbox.render();
+
         });
 
         
@@ -96,20 +106,6 @@ fetch('/data_photographers.json')
     });
 
 
-// TRIER PAR //select options// sort
-
-
-
-// tableauDesTags = [
-//     portrait,
-//     art,
-//     fashion,
-//     architecture,
-//     travel,
-//     sport,
-//     animals,
-//     events,
-//   ];
 
 
 // //afficher seuelement les photographes ayant le même tag

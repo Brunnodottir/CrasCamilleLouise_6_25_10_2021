@@ -498,6 +498,8 @@ cursor: pointer;
         font-size: 24px;
         right: 0;
         height: 20px;
+        margin-bottom: 20px;
+        align-items: center;
       }
 
      
@@ -505,6 +507,8 @@ cursor: pointer;
       .total-likes {
         display: flex;
         margin-right: 30px;
+        align-items: center;
+
       }
 
       
