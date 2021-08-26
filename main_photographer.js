@@ -16,6 +16,7 @@ const photographerElement = document.querySelector('#photographer');
 const photographerPrice = document.getElementById('sum-price-likes__price');
 
 const imageVideoList = []; // créé un nouveau tableau pour manipuler les médias
+console.log(imageVideoList);
 
 export function getTotalLike() {
     let sum = 0;
