@@ -54,6 +54,7 @@ fetch('/data_photographers.json')
 
 
        const mediaList = result.media;
+    //    console.log(mediaList.indexOf);
     //    console.log(mediaList);
 
         const activeMedia = mediaList.filter(media => media.photographerId === useId);
@@ -75,6 +76,8 @@ fetch('/data_photographers.json')
             const newMedia = new Image(element.id,element.photographerId, element.title, mediaSrc, element.tags, element.likes, element.date, element.price);
             newMedia.render();
             imageVideoList.push(newMedia); //ajoute les nouvelles données au tableau créé 
+            const newLightbox = new Lightbox (imageVideoList, newMedia);
+            newLightbox.render();
 
           
             
@@ -84,12 +87,14 @@ fetch('/data_photographers.json')
             const newMedia = new Video(element.id,element.photographerId, element.title, mediaSrc, element.tags, element.likes, element.date, element.price);
             newMedia.render();
             imageVideoList.push(newMedia); //ajoute les nouvelles données au tableau créé 
+            const newLightbox = new Lightbox (imageVideoList, newMedia);
+            newLightbox.render();
 
 
         }
        
-        const newLightbox = new Lightbox (element.mediaList, element.title);
-        newLightbox.render();
+        // const newLightbox = new Lightbox (imageVideoList, element.id);
+        // newLightbox.render();
 
         });
 
@@ -112,8 +117,12 @@ fetch('/data_photographers.json')
 // //afficher seuelement les photographes ayant le même tag
 // const affichageParTag = async () => {
 //   await triPhotographe();
+   //tableau
+
 //   console.log(tableauDesTags);
 // };
+
+
 
 //LIGHTBOX
 // méthodes de navigation et open/close

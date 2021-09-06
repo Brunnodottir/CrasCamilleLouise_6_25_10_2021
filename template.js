@@ -6,7 +6,15 @@ import { Photographe} from "./class/Photographe.js"
 fetch('/data_photographers.json')
     .then(data => data.json())
     .then(result => {
+       //  let photographList;
         const photographList = result.photographers;
+        //if isThereaTag = methode filter
+        // 
+        // if (tag) {
+        //     photographList = result.photographers.filter(.....)
+        // } else {
+        //     photographList = result.photographers;
+        // }
 
         for (let i = 0 ; i < photographList.length ; i++) {
           console.log(photographList);
@@ -14,6 +22,12 @@ fetch('/data_photographers.json')
             photographer.render();
             
         }
+
+// .filter(photographList) => {
+    
+// }
+
+
 
 
     });
@@ -66,3 +80,24 @@ const tableauDesTags = [
  ];
  tableauDesTags.sort();
  console.log(tableauDesTags);
+
+//  const tags = document.querySelectorAll('.general_tags');
+//  if (tags){
+//      tags.forEach(tag => {
+//          tags.addEventListener('onclick', e => {
+//              console.log("test");
+//          })
+//      })
+
+//  }
+
+
+//  tableauDesTags.filter(tags => tags.name.includes);
+// // methodeclick + addEventListener(onclick, () => {
+//     searchTerm = e.target.value;
+//     affichageParTag();
+// })
+
+//if (!!filterTag) {
+//     return ??
+// }

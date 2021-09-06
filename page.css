@@ -107,6 +107,7 @@ header h1  a {
     margin: 20px;
     text-decoration: none;
     cursor: pointer;
+    display: none;
 }
 
 .media_img
@@ -150,6 +151,79 @@ header h1  a {
   cursor: pointer;
 }
 
+/***LIGHTBOX***/
+
+.lightbox___container
+{
+  top : 0;
+  width: 100%;
+  height: 100%;
+  background-color: #C4c4c4;
+  z-index: 100;
+  position: fixed;
+
+
+}
+.media_lightbox
+{
+  width: 1050px;
+  height: 900px;
+  radius:5px;
+  object-fit: cover;
+  overflow: hidden;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  margin: auto;
+}
+
+.media_lightbox_title
+{
+  color: #901C1C;
+  font-weight: 900;
+  font-size: x-large;
+  position: absolute;
+  bottom: 2%;
+  left: 10%;
+  font-size: 2rem;
+
+}
+
+.closeIcon
+{
+  color: #901C1C;
+  font-weight: 900;
+  font-size: x-large;
+  position: absolute;
+  top: 2%;
+  right: 7%;
+  cursor: pointer;
+ 
+}
+
+.rightIcon {
+  color: #901C1C;
+  font-weight: 900;
+  font-size: x-large;
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  cursor: pointer;
+
+}
+
+.leftIcon {
+  color: #901C1C;
+  font-weight: 900;
+  font-size: x-large;
+  position: absolute;
+  top: 50%;
+  left: 7%;
+  cursor: pointer;
+
+}
 
 
 @media screen and (min-width: 768px) {
