@@ -74,10 +74,8 @@ fetch('/data_photographers.json')
             const mediaSrc = `Sample Photos/${firstName}/${element.image}`;
 
             const newMedia = new Image(element.id,element.photographerId, element.title, mediaSrc, element.tags, element.likes, element.date, element.price);
-            newMedia.render();
+            //newMedia.render();
             imageVideoList.push(newMedia); //ajoute les nouvelles données au tableau créé 
-            const newLightbox = new Lightbox (imageVideoList, newMedia);
-            newLightbox.render();
 
           
             
@@ -85,11 +83,8 @@ fetch('/data_photographers.json')
             const mediaSrc = `Sample Photos/${firstName}/${element.video}`;
 
             const newMedia = new Video(element.id,element.photographerId, element.title, mediaSrc, element.tags, element.likes, element.date, element.price);
-            newMedia.render();
+            //newMedia.render();
             imageVideoList.push(newMedia); //ajoute les nouvelles données au tableau créé 
-            const newLightbox = new Lightbox (imageVideoList, newMedia);
-            newLightbox.render();
-
 
         }
        
@@ -98,29 +93,80 @@ fetch('/data_photographers.json')
 
         });
 
-        
-        
-        
-
-
+        // console.log(imageVideoList);
+        const newLightbox = new Lightbox(imageVideoList);
+        imageVideoList.forEach(el => el.render());
 
         
+    
         
     
 
     
-    });
+ 
+
+
+
+// FILTER MEDIAS
+ console.log(imageVideoList);
+
+// get tags
+
+// add toggle to remove?
+
+// Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+// Show filtered elements
+// Hide elements that are not selected
+// Add active class to the current control button (highlight it)
+
+/// filter by tags
 
 
 
 
-// //afficher seuelement les photographes ayant le même tag
-// const affichageParTag = async () => {
-//   await triPhotographe();
-   //tableau
 
-//   console.log(tableauDesTags);
-// };
+
+
+
+
+
+// SORT OUT MEDIAS
+
+/// filter/sort out by likes
+
+// imageVideoList.sort(function(a,b){
+//     return a.likes - b.likes;
+//     console.log(imageVideoList);
+// });
+
+/// filter/sort out by date
+
+// imageVideoList.sort(function(a,b){
+//     const dateA = new Date(a.date), dateB = new Date(b.date);
+//     return dateA - dateB;
+// })
+
+/// filter/sort out by Name
+
+//  imageVideoList.sort(function(a,b){
+//      const titleA = a.title.toLowerCase(), titleB = b.title.toLowerCase();
+//      if (titleA < titleB) return -1;
+//      if (titleA > titleB) return 1;
+//     return 0;
+
+//  });
+
+
+// filterMedia("popular")
+// function filterMedia(c) {
+//     const x,i;
+//     x = document.getElementsByClassName("option");
+//     if (c == "popular")
+
+// }
+
+});
+
 
 
 

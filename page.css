@@ -21,6 +21,7 @@ header h1  a {
     justify-content: space-evenly;
     margin-top: 3em;
     text-decoration: none;
+    pointer-events: none;
 
 }
 
@@ -90,6 +91,8 @@ header h1  a {
     cursor: pointer;
     padding: 0.2em 0.5em;
     margin: 0 0.1em;
+    pointer-events: visible;
+    
 
 }
 
@@ -107,7 +110,7 @@ header h1  a {
     margin: 20px;
     text-decoration: none;
     cursor: pointer;
-    display: none;
+    /* display: none; */
 }
 
 .media_img
@@ -414,7 +417,7 @@ cursor: pointer;
       
       .option,
       .label {
-        color: white;
+        
         font-size: 16px;
       }
       
