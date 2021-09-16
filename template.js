@@ -9,7 +9,13 @@ fetch('/data_photographers.json')
        //  let photographList;
         const photographList = result.photographers;
         //if isThereaTag = methode filter
-        // 
+        const tags = document.querySelectorAll(".photographer__tags__tag");
+        tags.forEach(tag => {
+        tag.addEventListener('click', e => {
+       console.log("filtrons");;
+    })
+})
+
         // if (tag) {
         //     photographList = result.photographers.filter(.....)
         // } else {
@@ -68,18 +74,24 @@ window.addEventListener("scroll", function(){
 
 
 
-const tableauDesTags = [
-    portrait,
-    art,
-    fashion,
-    architecture,
-    travel,
-    sport,
-    animals,
-    events,
- ];
- tableauDesTags.sort();
- console.log(tableauDesTags);
+// const tableauDesTags = [
+//     portrait,
+//     art,
+//     fashion,
+//     architecture,
+//     travel,
+//     sport,
+//     animals,
+//     events,
+//  ];
+//  tableauDesTags.filter(tags);
+//  console.log(tableauDesTags);
+
+//onclick="filterSelection('portrait')
+
+ //1.shoot previous media data
+//  document.querySelector("main").innerHTML ="";
+ //2.sort by tags
 
 //  const tags = document.querySelectorAll('.general_tags');
 //  if (tags){

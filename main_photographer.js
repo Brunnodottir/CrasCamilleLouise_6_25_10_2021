@@ -50,6 +50,30 @@ fetch('/data_photographers.json')
         // console.log(activePhotographer);
         const photographerDetail = new Photographe(activePhotographer.name, activePhotographer.id, activePhotographer.city,activePhotographer.country, activePhotographer.tags, activePhotographer.tagline, activePhotographer.price, activePhotographer.portrait);
         photographerDetail.render();
+        const tags = document.querySelectorAll(".firsttag");
+        tags.forEach(tag => {
+            tag.addEventListener('click', e => {
+                filtrons()
+               ;
+            })
+        })
+
+        function filtrons(){
+            console.log("filtrons ")
+            //1.shoot previous media data
+            document.getElementById("medias").innerHTML = "";
+            //2.filter selected medias
+            imageVideoList.filter
+
+            //3.display selected medias
+
+
+            
+
+
+            
+        }
+
         
 
 
@@ -88,14 +112,28 @@ fetch('/data_photographers.json')
 
         }
        
-        // const newLightbox = new Lightbox (imageVideoList, element.id);
-        // newLightbox.render();
 
         });
 
         // console.log(imageVideoList);
         const newLightbox = new Lightbox(imageVideoList);
         imageVideoList.forEach(el => el.render());
+        // sortbyLike
+        document.getElementById("popular").addEventListener("click", sortbyLike)
+        //sortByDate
+        document.getElementById("date").addEventListener("click", sortByDate)
+        //sortByName
+        document.getElementById("titre").addEventListener("click", sortByTitle)
+
+
+        
+        // document.querySelectorAll(".s-c .top") // aller chercher ID input
+
+
+        
+        
+        // .addEventListener("change", sortbyLike );
+        
 
         
     
@@ -124,7 +162,7 @@ fetch('/data_photographers.json')
 
 
 
-
+// ADD KEYBOARD NAVIGATION dans lightbox
 
 
 
@@ -132,30 +170,18 @@ fetch('/data_photographers.json')
 
 // SORT OUT MEDIAS
 
-/// filter/sort out by likes
+//1.reset
+//2. tri
+//3. boucle et render pour afficher avec les parametres souhaités
 
-// imageVideoList.sort(function(a,b){
-//     return a.likes - b.likes;
-//     console.log(imageVideoList);
-// });
 
 /// filter/sort out by date
 
-// imageVideoList.sort(function(a,b){
-//     const dateA = new Date(a.date), dateB = new Date(b.date);
-//     return dateA - dateB;
-// })
+
 
 /// filter/sort out by Name
 
-//  imageVideoList.sort(function(a,b){
-//      const titleA = a.title.toLowerCase(), titleB = b.title.toLowerCase();
-//      if (titleA < titleB) return -1;
-//      if (titleA > titleB) return 1;
-//     return 0;
-
-//  });
-
+ 
 
 // filterMedia("popular")
 // function filterMedia(c) {
@@ -166,6 +192,50 @@ fetch('/data_photographers.json')
 // }
 
 });
+
+
+function sortbyLike() 
+
+{
+
+    //1. shoot previous media data
+    document.getElementById("medias").innerHTML = "";
+    //2. sort by likes
+    imageVideoList.sort(function(a,b){
+        return b.likes - a.likes;
+        
+    });
+    //3. display by likes
+    imageVideoList.forEach(el => el.render());
+}
+
+function sortByDate()
+{
+    document.getElementById("medias").innerHTML = "";
+    imageVideoList.sort(function(a,b){
+        const dateA = new Date(a.date), dateB = new Date(b.date);
+        return dateA - dateB;
+    });
+    imageVideoList.forEach(el => el.render());
+
+
+}
+
+function sortByTitle()
+{
+    document.getElementById("medias").innerHTML = "";
+    imageVideoList.sort(function(a,b){
+        const titleA = a.title.toLowerCase(), titleB = b.title.toLowerCase();
+        if (titleA < titleB) return -1;
+        if (titleA > titleB) return 1;
+       return 0;
+    });
+    imageVideoList.forEach(el => el.render());
+
+
+
+
+}
 
 
 
