@@ -63,7 +63,9 @@ fetch('/data_photographers.json')
             //1.shoot previous media data
             document.getElementById("medias").innerHTML = "";
             //2.filter selected medias
-            imageVideoList.filter
+            
+            // imageVideoList.filter(function ())
+            // ajout d'une classe "active" or boucle for
 
             //3.display selected medias
 

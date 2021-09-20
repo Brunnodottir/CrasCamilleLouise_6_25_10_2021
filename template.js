@@ -12,9 +12,39 @@ fetch('/data_photographers.json')
         const tags = document.querySelectorAll(".photographer__tags__tag");
         tags.forEach(tag => {
         tag.addEventListener('click', e => {
-       console.log("filtrons");;
+       filtrons();
+
+     
+       
     })
+    
 })
+
+function filtrons() {
+    console.log('filtrons!');
+    //1.shoot previous media data
+    // document.querySelector("main").innerHTML = "";
+    const tagArray = document.querySelector("main");
+
+    const getTags = (array, el) => {
+        array.forEach(item => {
+            console.log(item.tags);
+             
+        })
+
+    }
+
+    getTags(photographList, tagArray)
+    // const filteredArray = photographList.filter( tag => tag.tags == {
+
+    // })
+
+    
+
+    // console.log(tagArray);
+    //2.filter
+
+}
 
         // if (tag) {
         //     photographList = result.photographers.filter(.....)
