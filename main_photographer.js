@@ -53,17 +53,14 @@ fetch('/data_photographers.json')
         const tags = document.querySelectorAll(".firsttag");
         tags.forEach(tag => {
             tag.addEventListener('click', e => {
-                filtrons()
+            
+                // filtrons()
                ;
             })
         })
 
-        function filtrons(){
-            console.log("filtrons ")
-            //1.shoot previous media data
-            document.getElementById("medias").innerHTML = "";
-            //2.filter selected medias
-            
+       
+
             // imageVideoList.filter(function ())
             // ajout d'une classe "active" or boucle for
 
@@ -74,7 +71,7 @@ fetch('/data_photographers.json')
 
 
             
-        }
+        // }
 
         
 
@@ -122,11 +119,18 @@ fetch('/data_photographers.json')
         imageVideoList.forEach(el => el.render());
         // sortbyLike
         document.getElementById("popular").addEventListener("click", sortbyLike)
+        document.getElementById("popular").addEventListener("keydown", sortbyLike)
         //sortByDate
         document.getElementById("date").addEventListener("click", sortByDate)
+        document.getElementById("date").addEventListener("keydown", sortByDate)
+
         //sortByName
         document.getElementById("titre").addEventListener("click", sortByTitle)
+        document.getElementById("titre").addEventListener("keydown", sortByTitle)
 
+
+        
+        
 
         
         // document.querySelectorAll(".s-c .top") // aller chercher ID input
@@ -164,34 +168,9 @@ fetch('/data_photographers.json')
 
 
 
-// ADD KEYBOARD NAVIGATION dans lightbox
 
 
 
-
-
-// SORT OUT MEDIAS
-
-//1.reset
-//2. tri
-//3. boucle et render pour afficher avec les parametres souhaités
-
-
-/// filter/sort out by date
-
-
-
-/// filter/sort out by Name
-
- 
-
-// filterMedia("popular")
-// function filterMedia(c) {
-//     const x,i;
-//     x = document.getElementsByClassName("option");
-//     if (c == "popular")
-
-// }
 
 });
 
@@ -242,11 +221,8 @@ function sortByTitle()
 
 
 
-//LIGHTBOX
-// méthodes de navigation et open/close
-// class Lightbox
-// + render
 
+// ADD KEYBOARD NAVIGATION in lightbox
 
 
 

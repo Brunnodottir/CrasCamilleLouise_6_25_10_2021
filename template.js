@@ -8,60 +8,58 @@ fetch('/data_photographers.json')
     .then(result => {
        //  let photographList;
         const photographList = result.photographers;
-        //if isThereaTag = methode filter
         const tags = document.querySelectorAll(".photographer__tags__tag");
-        tags.forEach(tag => {
-        tag.addEventListener('click', e => {
-       filtrons();
+        const artistList = []; // crée un nouveau tableau pour les photographes
+        console.log(artistList);
 
-     
-       
-    })
-    
-})
+      
 
-function filtrons() {
-    console.log('filtrons!');
-    //1.shoot previous media data
-    // document.querySelector("main").innerHTML = "";
-    const tagArray = document.querySelector("main");
+// function filtrons() {
+//     // console.log('filtrons!');
+//     //1.shoot previous media data
+//     // document.querySelector("main").innerHTML = "";
+//     const tagArray = document.querySelector("main");
 
-    const getTags = (array, el) => {
-        array.forEach(item => {
-            console.log(item.tags);
+//     const getTags = (array, el) => {
+//         array.forEach(item => {
+//             console.log(item.tags);
              
-        })
+//         })
 
-    }
+//     }
 
-    getTags(photographList, tagArray)
-    // const filteredArray = photographList.filter( tag => tag.tags == {
-
-    // })
-
-    
-
-    // console.log(tagArray);
-    //2.filter
-
-}
-
-        // if (tag) {
-        //     photographList = result.photographers.filter(.....)
-        // } else {
-        //     photographList = result.photographers;
-        // }
+//     getTags(photographList, tagArray)
+  
+// }
 
         for (let i = 0 ; i < photographList.length ; i++) {
           console.log(photographList);
           const photographer = new Photographe( photographList[i].name, photographList[i].id, photographList[i].city, photographList[i].country, photographList[i].tags, " ' " + photographList[i].tagline + " ' ",photographList[i].price + "€", photographList[i].portrait );
             photographer.render();
+            artistList.push(photographer);
             
         }
 
-// .filter(photographList) => {
-    
-// }
+        tags.forEach(tag => {
+            tag.addEventListener('click', e => {
+           const tagBtn = e.target.getAttribute("data-value"); //get tag button value//
+        //    console.log(tagBtn);
+        const filteredArtist = artistList.filter((artist) => {
+            return artist.tags.includes(tagBtn);
+
+        })
+    console.log(filteredArtist);
+    document.querySelector("main").innerHTML = ""
+    for ( let i = 0; i<filteredArtist.length; i++) {
+        filteredArtist[i].render();
+    }
+
+         
+           
+        })
+        
+    })
+
 
 
 

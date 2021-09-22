@@ -61,7 +61,7 @@ body{
 
 {
     font-weight: normal;
-    font-size: 14px;
+    font-size: 34px;
     line-height: 18px;
     color: #901C1C;
     text-align: center;
@@ -79,14 +79,25 @@ body{
 
 .main-photographes
 {
+    
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+    padding: 20px;
+
+}
+
+.photographer-data {
+
+
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-top: 3em;
     text-decoration: none;
-
 }
 
 
@@ -114,6 +125,7 @@ body{
     color:#D3573C;
     margin-top: 0.5em;
     margin-bottom: 0;
+    size: 34px;
 
 }
 
@@ -131,6 +143,7 @@ body{
     margin-top: 0.5em;
     font-size: 10px;
     margin-bottom: 0;
+    color: black;
 }
 
 .photographe-tarif
@@ -143,9 +156,27 @@ body{
 
 }
 
-.photographe-tags
-{
-    margin-top: 0.5em;
+
+
+
+button.photographer__tags__tag {
+  
+    color: #901C1C;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+    border : 0.5px solid #C4c4c4;
+    box-sizing: border-box;
+    border-radius: 11px;
+    text-align: center;
+    cursor: pointer;
+    padding: auto;
+    background-color: transparent;
+    
+}
+
+button::before {
+    content:"#";
 }
 span
 {
@@ -161,9 +192,13 @@ span
     border-radius: 11px;
     text-align: center;
     cursor: pointer;
-    padding: 0.2em 0.5em;
-    margin: 0 0.1em;
+    margin-top: 3em;
+    margin-left: 0.5em;
+    
 
+}
+span::before {
+    content: "#";
 }
 
 
