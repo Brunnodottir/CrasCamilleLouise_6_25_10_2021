@@ -228,3 +228,20 @@ function sortByTitle()
 
 // CONTACT BUTTON
 
+// RECUP TAG dans l'URL //
+
+//index.html?tag="+tagid"+this.???
+
+
+
+// for (const[key,value] of usp){
+//     console.log(`$`);
+// }
+
+    const myUrl = new URL(window.location);
+    const searchTag = new URLSearchParams (url.search);
+    const useTag = String(searchParams.get("tag"));
+    console.log(useTag);
+// console.log(myUrl);
+
+

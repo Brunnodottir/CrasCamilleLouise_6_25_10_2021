@@ -84,6 +84,7 @@ header h1  a {
 .photographe-tags
 {
     margin-top: 0.5em;
+    align-self: flex-start;
 }
   main span
 {
@@ -104,6 +105,63 @@ header h1  a {
     pointer-events:initial
     
 
+}
+
+main span::before {
+  content: "#"
+}
+
+@media screen and (min-width: 768px) {
+  .main-photographes{
+    background-color: #FAFAFA;
+    padding: 50px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+  }
+
+  .photographe-img{
+    position: absolute;
+    left: 80%;
+   
+  }
+
+  .photographe-name{
+    font-size: 4rem;
+   
+  }
+  .photographe-loc{
+    font-size: 1.5rem;
+  }
+
+  .photographe-quote{
+   font-size: 1.2rem;
+  }
+  .photographe-tarif{
+    display: none;
+  }
+
+  .photographer-data{
+    display: block;
+  }
+
+  span {
+    align-self:flex-start ;
+  }
+
+  .btn-form{
+
+    position: fixed;
+    /* bottom: 80%; */
+    top: 17em;
+    left: 50%;
+    border-radius: 5px;
+    height: 35px;
+    cursor: pointer;
+}
+  
 }
 
 
@@ -272,7 +330,7 @@ header h1  a {
     color: white;
     position: fixed;
     bottom: 1em;
-    left: 10em;
+    /* left: 50%; */
     border-radius: 5px;
     height: 35px;
 }
@@ -376,6 +434,8 @@ cursor: pointer;
         margin-left: 100px;
         margin-top: 50px;
         align-items: center;
+        font-size: 1.2rem;
+        font-weight: 700;
       }
       input[type='checkbox' i] {
         appearance: none;
@@ -386,6 +446,8 @@ cursor: pointer;
       
       .dropdowns p {
         padding: 10px;
+        font-weight: 700;
+
       }
       
       #app-cover {
