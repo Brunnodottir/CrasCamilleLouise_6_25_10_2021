@@ -3,7 +3,8 @@
 
 <head>
 <meta charset="utf-8"/>
-<title>FishEye</title>
+<link rel="icon" href="favicon.ico">
+<title>FishEye - Site web de photographes freelance</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
@@ -18,7 +19,7 @@
 
     <!--HEADER-->
 <header>
-    <h1><a href="index.html"> Fish<i class="fas fa-camera"></i>ye</a></h1>
+    <h1><a href="index.html" tabindex="2"> Fish<i class="fas fa-camera"></i>ye</a></h1>
 
 </header>
 
@@ -26,31 +27,19 @@
 <!--BODY-->
 <main>
 
-  
 </main>
 
 
-<!--PROFIL-->
- 
 
 
 
 
- <!--Script-->
 
-  
-
-
-
- 
- <!--Photos-->
-
-<!-- Lightbox / SCRIPT -->
 
  
 
 <!--BOUTON CONTACT-->
-<button class="btn-form">
+<button class="btn-form" tabindex="6">
 Contactez-moi  </button><!--CONTACT FORM-->
 
 <div class="form-container">
@@ -102,7 +91,7 @@ novalidate>
     <form id="app-cover">
       <div id="select-box">
         <input type="checkbox" id="options-view-button" />
-        <div id="select-button">
+        <div id="select-button" aria-label="Cliquer pour trier les médias" tabindex="10">
           <div id="chevrons">
             <i class="fas fa-chevron-up"></i>
             <i class="fas fa-chevron-down"></i>
@@ -118,20 +107,22 @@ novalidate>
             name="platform" 
             value="popularity" 
             checked 
-            tabindex="0"
+            
+            aria-label="Cliquer pour trier par popularité"
             />
             <span class="label">Popularité</span>
             <span class="opt-val">Popularité</span>
           </div>
 
-          <div class="option">
+          <div class="option"> <!--modifier/voir Figma-->
             <input 
             id = "date"
             class="select-option top" 
             type="radio" 
             name="platform" 
             value="date" 
-            tabindex="0"
+            aria-label="Cliquer pour trier par date"
+
             />
             <span class="label">Date</span>
             <span class="opt-val">Date</span>
@@ -144,7 +135,9 @@ novalidate>
             type="radio" 
             name="platform" 
             value="title" 
-            tabindex="0"/>
+            aria-label="Cliquer pour trier par titre"
+
+      />
             
             <span class="label">Titre</span>
             <span class="opt-val">Titre</span>
@@ -156,29 +149,26 @@ novalidate>
     </form>
   </div>
 
-  <div id="medias"></div> <!--LIGHTBOX-->
+  <div id="medias">
+  </div>
+  <!--LIGHTBOX-->
 
 
 
-  <div class="sum-price-likes">
+  <div class="sum-price-likes" tabindex="8">
     <div class="total-likes">
       <p class="total-likes__sum"></p>
       <i class="fas fa-heart" aria-label="likes"></i>
     </div>
     <p id="sum-price-likes__price"></p>
 </div>
-</main>
-
-
-
-<script src="./main_photographer.js" type="module"></script>
-<script src="./class/Photographe.js" type="module"></script>
-<script src="./class/media.js" type="module"></script>
-
-
-
 
 <script src="./modal.js" type="module"></script>
+<script src="./main_photographer.js" type="module"></script>
+
+<!-- <script src="./class/Photographe.js" type="module"></script>
+<script src="./class/media.js" type="module"></script>  -->
+
 
 
 </body>

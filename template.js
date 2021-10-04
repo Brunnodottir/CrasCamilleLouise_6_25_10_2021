@@ -14,31 +14,41 @@ fetch('/data_photographers.json')
 
       
 
-// function filtrons() {
-//     // console.log('filtrons!');
-//     //1.shoot previous media data
-//     // document.querySelector("main").innerHTML = "";
-//     const tagArray = document.querySelector("main");
-
-//     const getTags = (array, el) => {
-//         array.forEach(item => {
-//             console.log(item.tags);
-             
-//         })
-
-//     }
-
-//     getTags(photographList, tagArray)
-  
-// }
-
         for (let i = 0 ; i < photographList.length ; i++) {
           console.log(photographList);
           const photographer = new Photographe( photographList[i].name, photographList[i].id, photographList[i].city, photographList[i].country, photographList[i].tags, " ' " + photographList[i].tagline + " ' ",photographList[i].price + "€", photographList[i].portrait );
-            photographer.render();
+            // photographer.render();
             artistList.push(photographer);
             
         }
+
+        //if tag dans la barre d'adresse => boucle pour afficher photographes filtrés
+        const myUrl = new URL(window.location);
+        const searchTag = new URLSearchParams (myUrl.search);
+        const useTag = searchTag.get("tag");
+        console.log(useTag === null);
+
+        //1. is there useTag?
+        if (useTag !== null ) {
+            const filteredByTagArtist = artistList.filter((artist) => {
+                return artist.tags.includes(useTag);
+    
+            })
+            document.querySelector("main").innerHTML ="";
+            for (let i =0; i<filteredByTagArtist.length; i++)
+
+
+                filteredByTagArtist[i].render();
+            }else{
+                for (let i =0; i< artistList.length ; i++){
+                    artistList[i].render()
+                    console.log(artistList[i]);
+                }
+            }
+
+        
+        
+
 
         tags.forEach(tag => {
             tag.addEventListener('click', e => {

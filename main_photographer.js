@@ -50,14 +50,16 @@ fetch('/data_photographers.json')
         // console.log(activePhotographer);
         const photographerDetail = new Photographe(activePhotographer.name, activePhotographer.id, activePhotographer.city,activePhotographer.country, activePhotographer.tags, activePhotographer.tagline, activePhotographer.price, activePhotographer.portrait);
         photographerDetail.render();
-        const tags = document.querySelectorAll(".firsttag");
-        tags.forEach(tag => {
-            tag.addEventListener('click', e => {
+        const nameOfPhotographer= document.getElementById('nameofphotographer')
+        nameOfPhotographer.innerHTML = activePhotographer.name;
+
+        // const tags = document.querySelectorAll(".firsttag");
+        // tags.forEach(tag => {
+        //     tag.addEventListener('click', e => {
             
-                // filtrons()
-               ;
-            })
-        })
+        //        ;
+        //     })
+        // })
 
        
 
@@ -233,10 +235,6 @@ function sortByTitle()
 //index.html?tag="+tagid"+this.???
 
 
-
-// for (const[key,value] of usp){
-//     console.log(`$`);
-// }
 
     const myUrl = new URL(window.location);
     const searchTag = new URLSearchParams (url.search);

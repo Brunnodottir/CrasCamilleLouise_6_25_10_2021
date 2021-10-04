@@ -86,7 +86,7 @@ header h1  a {
     margin-top: 0.5em;
     align-self: flex-start;
 }
-  main span
+  main .firsttag
 {
 
 
@@ -107,7 +107,7 @@ header h1  a {
 
 }
 
-main span::before {
+main .firsttag::before {
   content: "#"
 }
 

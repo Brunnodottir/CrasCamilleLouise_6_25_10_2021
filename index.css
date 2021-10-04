@@ -11,16 +11,17 @@ body{
 
 
 
-.header_container h1{
+ h1{
     color: #901C1C;
     font-size: 2rem;
     font-family: 'Open Sans', sans-serif;
 }
 
-.header_container h1 a 
+.header_container  a 
 {
     text-decoration: none;
     color: #901C1C;
+    font-size: xxx-large;
 }
 
 .header_container span
@@ -178,7 +179,7 @@ button.photographer__tags__tag {
 button::before {
     content:"#";
 }
-span
+.firsttag
 {
 
 
@@ -197,7 +198,7 @@ span
     
 
 }
-span::before {
+.firsttag::before {
     content: "#";
 }
 

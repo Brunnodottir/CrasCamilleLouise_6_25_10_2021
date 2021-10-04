@@ -43,18 +43,13 @@ function closeModal() {
   
   
     );
+
+    document.addEventListener("keydown", closeModal)
+    console.log("HEllo");
   
+    // focus //
 
 
-// GET NAME OF PHOTOGRAPHER
-
-const nameOfPhotographer= document.getElementById('nameofphotographer')
-fetch('/data_photographers.json')
-    .then(data => data.json())
-    .then(data => {
-      nameOfPhotographer.innerHTML = data.name;
-    })
-    
 
 //VALIDATION
 
