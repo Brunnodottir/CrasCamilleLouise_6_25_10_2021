@@ -184,7 +184,7 @@ main .firsttag::before {
 .media_img
 {
     width: 100%;
-    height: 190px;
+    height: 300px;
     object-fit: cover;
     overflow: hidden;
     border-radius: 5px;
@@ -194,7 +194,7 @@ main .firsttag::before {
 .media_video
 {
   width: 100%;
-    height: 190px;
+    height: 300px;
     object-fit: cover;
     overflow: hidden;
   border-radius : 5px;
@@ -239,7 +239,7 @@ main .firsttag::before {
 {
   width: 1050px;
   height: 900px;
-  radius:5px;
+  border-radius:5px;
   object-fit: cover;
   overflow: hidden;
   position: absolute;
@@ -335,22 +335,41 @@ main .firsttag::before {
     height: 35px;
 }
 
-.form-container
-{
+#modal-form {
+  background-color:rgba(255, 255, 255, 0.5);
   width: 100%;
+  height: 100vh;
+position: fixed;
+top: 0;
+right: 0;
+z-index: 15;
+justify-content: center;
+align-items: center;
+}
+
+fieldset {
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 8;
+}
+form
+{
+  margin: 0;
+  position: relative;
+  height: 100vh;
   background-color: #DB8876;
-  font-family: 'Open Sans', sans-serif;
-  padding-left: 20px;
-  display: none;
+  
+
  
 
 }
 
+#contact-me {
+  margin-bottom: 0;
+  font-size: xx-large
+}
+#nameofphotographer {
+  margin-top: 0;
+  font-size: xx-large;
+}
 
 #btnClose
 {
@@ -361,14 +380,15 @@ width: 20px;
 cursor: pointer;
 }
 
-.form-container label{
-    font-size: 24px;
+form label{
+    font-size: 1.5rem;
     color: #312E2E;
     padding: 20px;
-
+    display: flex;
+    flex-direction: column;
 }
 
-.form-container input{
+form input{
     border-radius: 5px;
     height:50px ;
     width: 330px;
@@ -379,15 +399,16 @@ cursor: pointer;
      padding-bottom: 60px;
  }
 
- .form-container button
- {height: 35px;
-    width: 170px;
-    left: 97px;
-    top: 702px;
+ #btn-submit
+ {
+    width: min-content;
     border-radius: 5px;
+    border: none;
+    font-size: 1.3rem;
     background: #901C1C;
     color: white;
-    margin-left: 25%;}
+    padding: 20px;
+  }
 
 
 
@@ -426,6 +447,21 @@ cursor: pointer;
 
  @media screen and (min-width : 768px) {
 
+  /* .form-container
+{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  background-color:rgba(255, 255, 255, 0.5);
+  font-family: 'Open Sans', sans-serif;
+  padding-left: 20px;
+  display: none;
+ 
+
+} */
     
 
     .dropdowns {

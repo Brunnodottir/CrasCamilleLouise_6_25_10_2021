@@ -1,6 +1,6 @@
 // DOM ELEMENTS
 
-const modal = document.querySelector('.form-container');
+const modal = document.querySelector('#modal-form');
 const modalBtn = document.querySelectorAll('.btn-form');
 const btnClose = document.getElementById("btnClose");
 
