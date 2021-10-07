@@ -51,7 +51,7 @@ fetch('/data_photographers.json')
         const photographerDetail = new Photographe(activePhotographer.name, activePhotographer.id, activePhotographer.city,activePhotographer.country, activePhotographer.tags, activePhotographer.tagline, activePhotographer.price, activePhotographer.portrait);
         photographerDetail.render();
         const nameOfPhotographer= document.getElementById('nameofphotographer')
-        nameOfPhotographer.innerHTML = activePhotographer.name;
+        nameOfPhotographer.innerHTML = "Contactez moi <br>" + activePhotographer.name;
 
         // const tags = document.querySelectorAll(".firsttag");
         // tags.forEach(tag => {
@@ -121,7 +121,7 @@ fetch('/data_photographers.json')
         imageVideoList.forEach(el => el.render());
         // sortbyLike
         document.getElementById("popular").addEventListener("click", sortbyLike)
-        document.getElementById("popular").addEventListener("keydown", sortbyLike)
+        document.getElementById("popular").addEventListener("keydown", sortbyLike) //ajouter touche
         //sortByDate
         document.getElementById("date").addEventListener("click", sortByDate)
         document.getElementById("date").addEventListener("keydown", sortByDate)
@@ -132,15 +132,10 @@ fetch('/data_photographers.json')
 
 
         
-        
-
-        
-        // document.querySelectorAll(".s-c .top") // aller chercher ID input
-
 
         
         
-        // .addEventListener("change", sortbyLike );
+ 
         
 
         

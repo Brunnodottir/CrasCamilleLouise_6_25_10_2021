@@ -1,19 +1,20 @@
 body{
     font-family: 'Roboto', sans-serif;
-    height: 200em;
 }
 .header_container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-bottom: 1rem;
+    align-items: center;
+    margin-top: 2em
 }
 
 
 
  h1{
     color: #901C1C;
-    font-size: 2rem;
+    font-size: 1rem;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -24,9 +25,8 @@ body{
     font-size: xxx-large;
 }
 
-.header_container span
-
-{
+button.photographer__tags__tag {
+  
     color: #901C1C;
     font-size: 12px;
     font-weight: 500;
@@ -36,43 +36,24 @@ body{
     border-radius: 11px;
     text-align: center;
     cursor: pointer;
-    padding: 0.2em 0.5em;
-    margin: 0.2em 0.5em;
+    padding: auto;
+    background-color: transparent;
+    margin: 0.2em;
+    
 }
 
-.header_container span:hover
-{
-    border: 0.5px solid blue;
 
-}
-
-.tags
-{
-    margin-top: auto;
-    margin-bottom: auto;
+.general_tags {
     display: flex;
     flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
     justify-content: center;
-    order: 3
-    ;
-
+    margin-top: 2rem;
 }
 
-.header_container h2
-
-{
-    font-weight: normal;
-    font-size: 34px;
-    line-height: 18px;
-    color: #901C1C;
-    text-align: center;
-    align-self: center;
-    order: 2;
 
 
-
-
-}
 
 
 
@@ -81,9 +62,7 @@ body{
 .main-photographes
 {
     
-    align-items: center;
     text-align: center;
-    text-decoration: none;
     margin: auto;
     padding: 20px;
 
@@ -91,21 +70,22 @@ body{
 
 .photographer-data {
 
-
+/* 
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     text-decoration: none;
+    margin: 0.3em;
 }
 
 
 .photographe-img
 {
-    height: 12.5rem;
-    width: 12.5rem;
+    height: 11.5rem;
+    width: 11.5rem;
     object-fit: cover;
     overflow: hidden;
     border-radius:50% ;
@@ -118,7 +98,7 @@ body{
 {
     box-shadow: 0 0 .8rem rgba(134, 134, 134, 0.432);
     cursor: pointer;
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .photographe-name
@@ -142,10 +122,11 @@ body{
 .photographe-quote
 {
     margin-top: 0.5em;
-    font-size: 10px;
+    font-size: 0.8em;
     margin-bottom: 0;
     color: black;
 }
+
 
 .photographe-tarif
 {
@@ -153,28 +134,17 @@ body{
     margin-bottom: 0;
     color: #757575;
     font-weight: 400;
-    font-size: 9px;
+    font-size: 0.7em;
 
+}
+.photographe-tarif::after {
+    content:"/jour"
 }
 
 
 
 
-button.photographer__tags__tag {
-  
-    color: #901C1C;
-    font-size: 12px;
-    font-weight: 500;
-    font-family: 'Open Sans', sans-serif;
-    border : 0.5px solid #C4c4c4;
-    box-sizing: border-box;
-    border-radius: 11px;
-    text-align: center;
-    cursor: pointer;
-    padding: auto;
-    background-color: transparent;
-    
-}
+
 
 button::before {
     content:"#";
@@ -182,8 +152,6 @@ button::before {
 .firsttag
 {
 
-
-
     color: #901C1C;
     font-size: 12px;
     font-weight: 500;
@@ -193,8 +161,11 @@ button::before {
     border-radius: 11px;
     text-align: center;
     cursor: pointer;
-    margin-top: 3em;
-    margin-left: 0.5em;
+    padding: 0.2em;
+    background-color: transparent;
+    margin: 0.2em;
+    /* margin-top: 1em; */
+    text-decoration: none;
     
 
 }
@@ -213,30 +184,43 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
+
 }
 
+.header_container{
+    justify-content: space-between;
+    margin: 4em;
 
+}
 
-.header_container h2{
+.header_container h1 {
     order: 3;
-
 }
 
-.header_container .tags{
+.general_tags{
     order: 2;
-
 }
+
+
+
+
+
+
+
 
 #btn-content {
-    
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: small;
     color: black;
     background-color: #DB8876;
     height: 30px;
-    border: #DB8876 1px;
     border-radius: 5px;
-    font-weight: 700;
     position: fixed;
     cursor: pointer;
+    top: 0;
+    left: 50%;
+    text-decoration: none;
 }
 
 }

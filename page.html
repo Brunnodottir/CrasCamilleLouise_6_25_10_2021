@@ -39,18 +39,19 @@
  
 
 <!--BOUTON CONTACT-->
-<button class="btn-form" tabindex="6">
+<button class="btn-form" tabindex="0">
 Contactez-moi  </button><!--CONTACT FORM-->
 
 <section id="modal-form">
 
 
 
-<h1 id="nameofphotographer"></h1>
+
 <form name="reserve"
 method="get"
 id="form"
 novalidate>
+<h1 id="nameofphotographer"> Contactez moi</h1>
     <p id="btnClose"><i class="fas fa-times"></i></p>
 
     <div class="formData">
@@ -91,14 +92,16 @@ novalidate>
     <form id="app-cover">
       <div id="select-box">
         <input type="checkbox" id="options-view-button" />
-        <div id="select-button" aria-label="Cliquer pour trier les médias" tabindex="10">
+        <div id="select-button" role="button" aria-haspopup="listbox"
+        aria-label="Cliquer pour trier les médias" tabindex="0">
           <div id="chevrons">
             <i class="fas fa-chevron-up"></i>
             <i class="fas fa-chevron-down"></i>
           </div>
         </div>
-        <div id="options">
-          <div class="option">
+        <div id="options" role="listbox"
+        >
+          <div class="option" role="option">
           <!--add Id sur input pour tri-->
             <input 
             class="select-option top" 
@@ -114,7 +117,7 @@ novalidate>
             <span class="opt-val">Popularité</span>
           </div>
 
-          <div class="option"> <!--modifier/voir Figma-->
+          <div class="option" role="option"> <!--modifier/voir Figma-->
             <input 
             id = "date"
             class="select-option top" 
@@ -128,7 +131,7 @@ novalidate>
             <span class="opt-val">Date</span>
           </div>
 
-          <div class="option">
+          <div class="option" role="option">
             <input 
             id = "titre"
             class="select-option top" 

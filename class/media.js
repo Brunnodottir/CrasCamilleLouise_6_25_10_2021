@@ -55,8 +55,6 @@ class Image extends Media {
         const container = document.createElement("div");
     
         container.className = "media";
-                    // addEventListener openLightbox ?
-
         document.body.appendChild(container);
 
         const img = document.createElement("img");
@@ -64,8 +62,14 @@ class Image extends Media {
         img.addEventListener("click", (e) => {
             this.handleClick();
         })
+
         img.className = "media_img";
-        img.setAttribute("aria-label", "Cliquer pour agrandir")
+        img.setAttribute("aria-label", "Cliquer pour agrandir");
+        img.setAttribute("tabindex", "0");
+        img.addEventListener("keydown", (e)=>{
+            if (e.key === 'Enter'){
+                this.handleClick(e);
+        }})
         const infos = document.createElement("div");
         infos.className = "media_infos";
         const h2 = document.createElement ('h2');
@@ -79,6 +83,7 @@ class Image extends Media {
         const heart = document.createElement ("i");
         heart.className = "fas fa-heart";
         heart.setAttribute("aria-label", "cliquer pour aimer le média")
+        heart.setAttribute("tabindex", "0");
        
         // let liked = false;
         // console.log(liked);
@@ -145,7 +150,9 @@ class Image extends Media {
                 this.handleClick();
             })
             video.className ="media_video";
-            video.setAttribute("aria-label", "Cliquer pour agrandir")
+            video.setAttribute("aria-label", "Cliquer pour agrandir");
+            video.setAttribute("tabindex", "0");
+
 
             const infos = document.createElement("div");
             infos.className = "media_infos";
@@ -160,6 +167,7 @@ class Image extends Media {
            const heart = document.createElement ("i");
            heart.className = "fas fa-heart";
            heart.setAttribute("aria-label", "cliquer pour aimer le média")
+           heart.setAttribute("tabindex", "0");
            heart.addEventListener("click", () => {
                this.incrLikes();
                numberoflikes.textContent = this.likes;
@@ -203,7 +211,7 @@ class Lightbox {
         this.mediaList.forEach((el) =>  {
             el.handleClick = () => {
                 this.render(el);  // pourquoi ?
-                // el.handleKe
+            
             }
         });
 
@@ -215,8 +223,6 @@ class Lightbox {
     }
 
 
-    
-        
     
 
     render(inputMedia){

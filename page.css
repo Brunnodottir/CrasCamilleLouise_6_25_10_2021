@@ -1,6 +1,9 @@
 body {
     font-family: 'roboto', sans-serif;
-    margin: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left:20px;
+    margin-bottom: 2em;
 }
 
 header h1  a {
@@ -16,34 +19,37 @@ header h1  a {
 {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: normal; */
     flex-wrap: wrap;
-    justify-content: space-evenly;
     margin-top: 3em;
     text-decoration: none;
     pointer-events: none;
+    margin-bottom: 2em;
 
 }
 
 .photographer-data
 {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
+  flex-direction: row;
+  align-content: flex-start;
+  align-items: stretch;
+  justify-content: space-around;
   text-decoration: none;
 
 }
 
 .photographe-img
 {
-    height: 9rem;
-    width: 9rem;
+    height: 6rem;
+    width: 6rem;
     object-fit: cover;
     overflow: hidden;
     border-radius:50% ;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     box-shadow: 0 0 .8rem rgba(134, 134, 134, 0.432);
+    order: 2;
 
 }
 
@@ -73,18 +79,19 @@ header h1  a {
 
 .photographe-tarif
 {
-    margin-top: 0.5em;
-    margin-bottom: 0;
-    color: #757575;
-    font-weight: 400;
-    font-size: 9px;
+  display: none;
 
 }
 
 .photographe-tags
 {
     margin-top: 0.5em;
-    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    margin-left: 1.5em;
 }
   main .firsttag
 {
@@ -102,7 +109,8 @@ header h1  a {
     cursor: pointer;
     padding: 0.2em 0.5em;
     margin: 0 0.1em;
-    pointer-events:initial
+    pointer-events:initial;
+    text-decoration: none;
     
 
 }
@@ -184,17 +192,17 @@ main .firsttag::before {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    margin-top: 100px;
-    margin: 20px;
     text-decoration: none;
     cursor: pointer;
+    /* margin-bottom: 1em; */
     /* display: none; */
 }
 
 .media_img
 {
     width: 100%;
-    height: 300px;
+    height: 10em;
+    /* height: 300px; */
     object-fit: cover;
     overflow: hidden;
     border-radius: 5px;
@@ -204,7 +212,7 @@ main .firsttag::before {
 .media_video
 {
   width: 100%;
-    height: 300px;
+    height: 10em;
     object-fit: cover;
     overflow: hidden;
   border-radius : 5px;
@@ -342,21 +350,28 @@ main .firsttag::before {
     color: white;
     position: fixed;
     bottom: 1em;
-    /* left: 50%; */
+    left: 25%;
     border-radius: 5px;
     height: 35px;
 }
 
+#nameofphotographer {
+  margin: 1em;
+}
+
 #modal-form {
-  background-color:rgba(255, 255, 255, 0.5);
+  background-color: #DB8876;
   width: 100%;
-  height: 100vh;
-position: fixed;
+  height: inherit;
+position: absolute;
 top: 0;
 right: 0;
+bottom: 0;
 z-index: 15;
 justify-content: center;
 align-items: center;
+display: none; /*important*/
+
 }
 
 
@@ -364,16 +379,13 @@ form
 {
   margin: 0;
   position: relative;
-  height: 100vh;
+  height: 120vh;
   background-color: #DB8876;
   
 
 
 }
 
-#contact-me {
-  margin-bottom: 0;
-  font-size: xx-large
 }
 #nameofphotographer {
   margin-top: 0;
@@ -387,6 +399,15 @@ form
     height: 20px;
 width: 20px;
 cursor: pointer;
+margin: 0;
+margin-right: 20px;
+position: absolute;
+top: 0;
+right: 0;
+}
+
+form .fas{
+  font-size: x-large;
 }
 
 form label{
@@ -404,6 +425,9 @@ form input{
     border: none;
 }
 
+
+
+
  .mymessage{
      padding-bottom: 60px;
  }
@@ -413,17 +437,22 @@ form input{
     width: min-content;
     border-radius: 5px;
     border: none;
-    font-size: 1.3rem;
+    font-size: 1rem;
     background: #901C1C;
     color: white;
     padding: 20px;
+    width: 50%;
+    margin-left: 25%;
+    height: 1.2em;
+    text-align: center;
+    
   }
 
 
 
     .formData[data-error]::after {
       content: attr(data-error);
-      font-size: 0.5em;
+      font-size: 1em;
       color: #e54858;
       display: block;
       margin-top: 7px;
@@ -432,6 +461,7 @@ form input{
       line-height: 0.3;
       opacity: 0;
       transition: 0.3s;
+      margin-left: 20px;
     }
     .formData[data-error-visible="true"]::after {
       opacity: 1;

@@ -34,11 +34,14 @@ class Photographe {
         const img = document.createElement('img');
         img.src = "Sample Photos/Photographers ID Photos/" + this.portrait;
         img.className = "photographe-img";
+    
         img.href ="/page.html?id="+this.id;
+        const infocontainer = document.createElement("div");
+        infocontainer.className ="photographer-infos"
         const h2 = document.createElement("h2");
         h2.className = "photographe-name";
         h2.textContent = this.name;
-        h2.setAttribute("aria-label", "cliquer pour accéder à la page photographe");
+        h2.setAttribute("aria-label", "Cliquer pour accéder à la page photographe");
         const loc = document.createElement ("p");
         loc.className = "photographe-loc";
         loc.textContent = this.city +', '+ this.country;
@@ -49,7 +52,8 @@ class Photographe {
         pprice.className ="photographe-tarif";
         pprice.textContent = this.price;
         
-        linkcontainer.append(img, h2, loc, quote, pprice);
+        linkcontainer.append(img,infocontainer);
+        infocontainer.append(h2,loc,quote,pprice);
         container.append(linkcontainer);
         const ptags = document.createElement("div");
         ptags.className = "photographe-tags";
