@@ -344,7 +344,7 @@ onKeyup(e) {
     if (e.key === 'Escape'){
         this.close(e);
     }
-
+// 
     else if(e.key === 'ArrowLeft'){
         this.prev(e)
     }

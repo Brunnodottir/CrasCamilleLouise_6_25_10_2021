@@ -44,7 +44,13 @@ function closeModal() {
   
     );
 
-   //add event clavier sur touche echap => sur section modal-form//
+   document.addEventListener("keydown", (event) =>{
+     if (event.key ==="Escape"){
+       closeModal()
+     }
+   })
+
+
 
 
 
