@@ -10,18 +10,10 @@ const formData = document.querySelectorAll(".formData");
 const firstNameInput = document.getElementById("prenom");
 const lastNameInput = document.getElementById("nom");
 const email = document.getElementById("email");
-const yourMessage = document.getElementById("message");
 
 
 // CONFIRM FORM DOM ELEMENTS
 
-// const confirmModal = document.querySelector(".confirm-modal-submit");
-const btnSubmit = document.getElementById("btn-submit");
-// const btnCloseSubmit = document.getElementsByClassName (".close-submit");
-// const bntConfirm = document.getElementById("btn-confirm");
-
-
-//LAUNCH MODAL FORM
 
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
@@ -89,8 +81,7 @@ const isFirstValid = () => {
   }
   
   const isEmailValid = () => {
-    const value = email.value;
-    let regexEmail = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,63})$/;
+    let regexEmail = /^([a-zA-Z0-9_\-.]+)@([a-zA-Z0-9_\-.]+)\.([a-zA-Z]{2,63})$/;
       if (email.value.trim().match(regexEmail)) {
         formData[2].setAttribute("data-error-visible", "false")
           return true; 
@@ -120,7 +111,6 @@ const isFirstValid = () => {
   }
 }
 
-  // ALL FIELDS VERIFICATION
 
 
 
@@ -132,9 +122,10 @@ modal.addEventListener("submit", function (e) {
     const validFirstName = isFirstValid();
     const validLastName = isLastValid();
     const validEmail = isEmailValid();
+    const validMessage = isMessageValid();
     
     if (
-      validFirstName && validLastName &&  validEmail ) {
+      validFirstName && validLastName &&  validEmail && validMessage ) {
       launchModal()
       document.querySelector('form').reset(); //Efface les champs après soumission//
       closeModal();
@@ -150,5 +141,5 @@ modal.addEventListener("submit", function (e) {
   
 
 function launchValidationModal() {
-    window.alert("Ok");
+    window.alert("Votre message a bien été envoyé!");
 }

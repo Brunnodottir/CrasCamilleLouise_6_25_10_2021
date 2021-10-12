@@ -13,35 +13,20 @@ class Media {
     }
 
 
-    // likeSystem(){
-    //     console.log('likesystem');
-    //     let liked = false;
 
-    //     if(this.likes == this.likes){
-    //         this.incrLikes()
-    //     }else {
-    //         this.decrLikes()
-    //     }
-
-
-
-     
-    // }
 
     incrLikes(){
-        // const thislike = document.querySelectorAll('i');
-        // thislike.setAttribute('true','true');
-
-        this.likes = this.likes + 1;
        
 
+        this.likes = this.likes + 1;
+    
 
     }
 
-    decrLikes(){
-        this.likes = this.likes -1;
-    }
-    // ajout methode rafraichissement ?
+    // decrLikes(){
+    //     this.likes = this.likes -1;
+    // }
+
 
 
 }
@@ -59,7 +44,7 @@ class Image extends Media {
 
         const img = document.createElement("img");
         img.src = this.src; 
-        img.addEventListener("click", (e) => {
+        img.addEventListener("click", () => {
             this.handleClick();
         })
 
@@ -141,7 +126,7 @@ class Image extends Media {
 
             const video = document.createElement("video");
             video.src = this.src;
-            video.addEventListener("click", (e) => {
+            video.addEventListener("click", () => {
                 this.handleClick();
             })
             video.className ="media_video";
@@ -210,7 +195,7 @@ class Lightbox {
         this.activeMedia = null;
         this.mediaList.forEach((el) =>  {
             el.handleClick = () => {
-                this.render(el);  // pourquoi ?
+                this.render(el); 
             
             }
         });
@@ -226,8 +211,6 @@ class Lightbox {
     
 
     render(inputMedia){
-        console.log(this.mediaList);
-        // const mediaData = this.mediaList.find(el => el.id === this.id);
         this.activeMedia = inputMedia;
         const mediaData = this.activeMedia;
         console.log(mediaData);
@@ -239,7 +222,7 @@ class Lightbox {
         this.closeIcon.setAttribute("aria-label", "Fermer");
         this.closeIcon.setAttribute("tabindex", "0")
         this.closeIcon.addEventListener("click", () => {
-            this.close(); // tout ce qui est déclaré dans la classe peut devenir this.something
+            this.close();
         })
         this.leftIcon = document.createElement("i");
         this.leftIcon.className = "lightbox__prev fas fa-chevron-left leftIcon";
@@ -269,13 +252,11 @@ class Lightbox {
     
 
     next() {
-    //    const activeMedia = this.media.filter(media => name)
-    console.log("next");
+   
 
     const idx = this.mediaList.findIndex((e)=> {
         return e === this.activeMedia});
-        console.log(idx);
-        console.log("active media : ", this.activeMedia);
+        
 
         document.querySelector(".media_lightbox").remove();
         document.querySelector(".media_lightbox_title").remove();
@@ -302,8 +283,7 @@ class Lightbox {
     prev() {
         const idx = this.mediaList.findIndex((e)=> {
             return e === this.activeMedia});
-            console.log(idx);
-            console.log("active media : ", this.activeMedia);
+            
     
             document.querySelector(".media_lightbox").remove();
             document.querySelector(".media_lightbox_title").remove();
@@ -328,16 +308,12 @@ class Lightbox {
     }
 
     close() {
-        // const closeBtn = document.querySelector(".closeIcon");
         const lightbox = document.querySelector(".lightbox___container");
         if (lightbox) {
             lightbox.remove();
         }
         
-        // document.removeEventListener('keyup', this.onKeyup)
-        // this.closeIcon.addEventListener("click", close)
-
-        
+      
 
     }
 
@@ -348,7 +324,7 @@ onKeyup(e) {
     if (e.key === 'Escape'){
         this.close(e);
     }
-// 
+
     else if(e.key === 'ArrowLeft'){
         this.prev(e)
     }

@@ -1,8 +1,6 @@
 class Photographe {
     constructor(nom, id, city, country, tags, quote, price, portrait) {
         this.name = nom;
-        // this.firstname = nom.split(" ")[0];
-        // this.lastname = nom.split(" ") [1];
         this.id = id;
         this.city = city;
         this.country = country;
@@ -18,7 +16,6 @@ class Photographe {
         const container = document.createElement("div");
         container.className = "main-photographes";
         container.title = "Page-photographe";  
-        // container.href = "/page.html?id="+this.id; //+ this.id// OR SEARCH PARAMS OR ?id=${photographer.id}
         document.body.appendChild(container); 
 
         document.querySelector("main").append(container);
@@ -29,8 +26,7 @@ class Photographe {
         linkcontainer.className = "photographer-data"
         linkcontainer.href ="/page.html?id="+this.id;
         linkcontainer.setAttribute('alt', this.name);
-        // linkcontainer.setAttribute("tab-index=0")
-        // linkcontainer.aria-labellby="test-acces";
+      
         const img = document.createElement('img');
         img.src = "Sample Photos/Photographers ID Photos/" + this.portrait;
         img.className = "photographe-img";
@@ -84,16 +80,5 @@ class Photographe {
 }
 
 
-
-// class Artist extends Photographe {
-//     constructor(nom, id, city, country, tags, quote, price, portrait) {
-//         super(nom, id, city, country, tags, quote, price, portrait) 
-            
-//     }
-
-   
-// }
-// const artiste1 = new Artist ("Michel", 140, "Paris", "France", [null], 150);
-// console.log(artiste1);
 
 export {Photographe};

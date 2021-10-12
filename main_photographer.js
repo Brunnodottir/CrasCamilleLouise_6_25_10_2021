@@ -2,21 +2,15 @@ import {Photographe} from "./class/Photographe.js";
 import {Media, Image, Video, Lightbox} from "./class/media.js";
 
 
-// RECUP ID dans l'URL // WINDOW.LOCATION
+// RECUP ID dans l'URL //
 
-
-
-const queryParam_url_id = window.location.search;
-console.log(queryParam_url_id); //??id
 
 const url = new URL(window.location);
 const searchParams = new URLSearchParams(url.search);
 const useId = Number(searchParams.get("id"));
-const photographerElement = document.querySelector('#photographer');
-const photographerPrice = document.getElementById('sum-price-likes__price');
 
-const imageVideoList = []; // créé un nouveau tableau pour manipuler les médias
-console.log(imageVideoList);
+
+const imageVideoList = []; // crée un nouveau tableau pour manipuler les médias
 
 export function getTotalLike() {
     let sum = 0;
@@ -30,8 +24,6 @@ export function getTotalLike() {
 
 export function updateTotalLike(value){
     const totalLikesElement = document.querySelector('.total-likes__sum');
-    // totalLikesElement.innerHTML = value;
-
     totalLikesElement.textContent = value;
 }
 
@@ -42,14 +34,12 @@ fetch('./data_photographers.json')
     .then(data => data.json())
     .then(result => {
         const photographList = result.photographers;
-        // console.log(photographList);
 
         
         
 
 
         const activePhotographer = photographList.filter(photographers => photographers.id === useId)[0];
-        // console.log(activePhotographer);
         const photographerDetail = new Photographe(activePhotographer.name, activePhotographer.id, activePhotographer.city,activePhotographer.country, activePhotographer.tags, activePhotographer.tagline, activePhotographer.price, activePhotographer.portrait);
         photographerDetail.render();
         const nameOfPhotographer= document.getElementById('nameofphotographer')
@@ -61,17 +51,11 @@ fetch('./data_photographers.json')
 
 
        const mediaList = result.media;
-    //    console.log(mediaList.indexOf);
-    //    console.log(mediaList);
-
-        const activeMedia = mediaList.filter(media => media.photographerId === useId);
-        // console.log(activeMedia);
+       const activeMedia = mediaList.filter(media => media.photographerId === useId);
 
         activeMedia.forEach(element => { 
             const firstName = photographerDetail.name.split(" ")[0];
             const price = photographerDetail.price;
-            // console.log(firstName);
-            console.log(price);
             const getPrice = document.getElementById("sum-price-likes__price");
             getPrice.textContent = price + "€";
 
@@ -81,7 +65,6 @@ fetch('./data_photographers.json')
             const mediaSrc = `Sample Photos/${firstName}/${element.image}`;
 
             const newMedia = new Image(element.id,element.photographerId, element.title, mediaSrc, element.tags, element.likes, element.date, element.price);
-            //newMedia.render();
             imageVideoList.push(newMedia); //ajoute les nouvelles données au tableau créé 
 
           
@@ -90,7 +73,6 @@ fetch('./data_photographers.json')
             const mediaSrc = `Sample Photos/${firstName}/${element.video}`;
 
             const newMedia = new Video(element.id,element.photographerId, element.title, mediaSrc, element.tags, element.likes, element.date, element.price);
-            //newMedia.render();
             imageVideoList.push(newMedia); //ajoute les nouvelles données au tableau créé 
 
         }
@@ -98,16 +80,13 @@ fetch('./data_photographers.json')
 
         });
 
-        // console.log(imageVideoList);
-        const newLightbox = new Lightbox(imageVideoList);
         imageVideoList.forEach(el => el.render());
         // sortbyLike
         document.getElementById("popular").addEventListener("click", sortbyLike)
-        document.getElementById("popular").addEventListener("keydown", sortbyLike) //ajouter touche
+        document.getElementById("popular").addEventListener("keydown", sortbyLike)
         //sortByDate
         document.getElementById("date").addEventListener("click", sortByDate)
         document.getElementById("date").addEventListener("keydown", sortByDate)
-
         //sortByName
         document.getElementById("titre").addEventListener("click", sortByTitle)
         document.getElementById("titre").addEventListener("keydown", sortByTitle)
@@ -120,18 +99,6 @@ fetch('./data_photographers.json')
     });
         
 
-        
-    
-        
-    
-
-    
- 
-
-
-
-// FILTER MEDIAS
- console.log(imageVideoList)
 
 
 
@@ -147,7 +114,6 @@ function sortbyLike()
     //2. sort by likes
     imageVideoList.sort(function(a,b){
         return b.likes - a.likes;
-        
     });
     //3. display by likes
     imageVideoList.forEach(el => el.render());
@@ -185,24 +151,6 @@ function sortByTitle()
 
 
 
-// ADD KEYBOARD NAVIGATION in lightbox
-
-
-
-// CONTACT BUTTON
-
-// RECUP TAG dans l'URL //
-
-//index.html?tag="+tagid"+this.???
-
-
-
-    const myUrl = new URL(window.location);
-    const searchTag = new URLSearchParams (url.search);
-    const useTag = String(searchParams.get("tag"));
-    console.log(useTag);
-// console.log(myUrl);
-
 
 
 // DROPDOWN//
@@ -211,7 +159,6 @@ const dropbtn = document.querySelector('#options-view-button');
 const chevronUp = document.querySelector('.fa-chevron-up');
 const chevronDown = document.querySelector('.fa-chevron-down');
 
-// let isVisible = false;
 
 dropbtn.addEventListener('click', () => {
     chevronDown.classList.toggle('invisible');
