@@ -36,12 +36,20 @@ button.photographer__tags__tag {
     border-radius: 11px;
     text-align: center;
     cursor: pointer;
-    padding: auto;
+    /* padding: auto; */
     background-color: transparent;
     margin: 0.2em;
     
 }
 
+button.photographer__tags__tag:active {
+    background-color: #901C1C;
+    color: white;
+}
+button.photographer__tags__tag:focus {
+    background-color: #901C1C;
+    color: white;
+}
 
 .general_tags {
     display: flex;
