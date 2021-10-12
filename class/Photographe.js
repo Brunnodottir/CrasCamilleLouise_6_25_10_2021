@@ -35,7 +35,7 @@ class Photographe {
         img.src = "Sample Photos/Photographers ID Photos/" + this.portrait;
         img.className = "photographe-img";
     
-        img.href ="/page.html?id="+this.id;
+        img.href ="./page.html?id="+this.id;
         const infocontainer = document.createElement("div");
         infocontainer.className ="photographer-infos"
         const h2 = document.createElement("h2");
