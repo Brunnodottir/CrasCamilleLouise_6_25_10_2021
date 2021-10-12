@@ -53,27 +53,7 @@ fetch('/data_photographers.json')
         const nameOfPhotographer= document.getElementById('nameofphotographer')
         nameOfPhotographer.innerHTML = "Contactez moi <br>" + activePhotographer.name;
 
-        // const tags = document.querySelectorAll(".firsttag");
-        // tags.forEach(tag => {
-        //     tag.addEventListener('click', e => {
-            
-        //        ;
-        //     })
-        // })
-
-       
-
-            // imageVideoList.filter(function ())
-            // ajout d'une classe "active" or boucle for
-
-            //3.display selected medias
-
-
-            
-
-
-            
-        // }
+        
 
         
 
@@ -135,7 +115,7 @@ fetch('/data_photographers.json')
 
         
         
- 
+    });
         
 
         
@@ -149,27 +129,11 @@ fetch('/data_photographers.json')
 
 
 // FILTER MEDIAS
- console.log(imageVideoList);
-
-// get tags
-
-// add toggle to remove?
-
-// Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-// Show filtered elements
-// Hide elements that are not selected
-// Add active class to the current control button (highlight it)
-
-/// filter by tags
+ console.log(imageVideoList)
 
 
 
 
-
-
-
-
-});
 
 
 function sortbyLike() 
@@ -236,5 +200,23 @@ function sortByTitle()
     const useTag = String(searchParams.get("tag"));
     console.log(useTag);
 // console.log(myUrl);
+
+
+
+// DROPDOWN//
+
+const dropbtn = document.querySelector('#options-view-button');
+const chevronUp = document.querySelector('.fa-chevron-up');
+const chevronDown = document.querySelector('.fa-chevron-down');
+
+// let isVisible = false;
+
+dropbtn.addEventListener('click', () => {
+    chevronDown.classList.toggle('invisible');
+    chevronUp.classList.toggle('visible');
+
+
+});
+
 
 

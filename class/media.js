@@ -85,24 +85,19 @@ class Image extends Media {
         heart.setAttribute("aria-label", "cliquer pour aimer le média")
         heart.setAttribute("tabindex", "0");
        
-        // let liked = false;
-        // console.log(liked);
         heart.addEventListener("click", () => {
-            // heart.setAttribute('true', 'true')
-            // console.log(heart);
-            // this.likeSystem(); 
-
+        
 
             this.incrLikes();  
             numberoflikes.textContent = this.likes;
             updateTotalLike(getTotalLike());
             
         })
-        // heart.addEventListener("keydown", () => {
-        //     this.incrLikes();  
-        //     numberoflikes.textContent = this.likes;
-        //     updateTotalLike(getTotalLike());
-        // })
+        heart.addEventListener("keydown", () => {
+            this.incrLikes();  
+            numberoflikes.textContent = this.likes;
+            updateTotalLike(getTotalLike());
+        })
         
         infos.append( h2,likes );
         likes.append(numberoflikes, heart);
@@ -173,6 +168,11 @@ class Image extends Media {
                numberoflikes.textContent = this.likes;
                updateTotalLike(getTotalLike());
            })
+           heart.addEventListener("keydown", () => {
+            this.incrLikes();  
+            numberoflikes.textContent = this.likes;
+            updateTotalLike(getTotalLike());
+        })
            infos.append( h2,likes);
            likes.append(numberoflikes, heart);
 
@@ -352,9 +352,9 @@ onKeyup(e) {
         this.next(e)
     }
 
-    else if (e.key === 8){
-        this.open(e);
-    }
+    // else if (e.key === 8){
+    //     this.open(e);
+    // }
 
     
 

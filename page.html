@@ -86,22 +86,22 @@ novalidate>
 
 
 
-
+ 
   <div class="dropdowns">
     <p>Trier par</p>
     <form id="app-cover">
       <div id="select-box">
         <input type="checkbox" id="options-view-button" />
-        <div id="select-button" role="button" aria-haspopup="listbox"
-        aria-label="Cliquer pour trier les médias" tabindex="0">
+        <div id="select-button"  aria-haspopup="listbox"
+        aria-label="Cliquer pour trier les médias" >
           <div id="chevrons">
             <i class="fas fa-chevron-up"></i>
             <i class="fas fa-chevron-down"></i>
           </div>
         </div>
-        <div id="options" role="listbox"
+        <ul id="options" role="listbox" tabindex="-1"
         >
-          <div class="option" role="option">
+          <li class="option" role="option">
           <!--add Id sur input pour tri-->
             <input 
             class="select-option top" 
@@ -115,9 +115,9 @@ novalidate>
             />
             <span class="label">Popularité</span>
             <span class="opt-val">Popularité</span>
-          </div>
+          </li>
 
-          <div class="option" role="option"> <!--modifier/voir Figma-->
+          <li class="option" role="option"> <!--modifier/voir Figma-->
             <input 
             id = "date"
             class="select-option top" 
@@ -129,9 +129,9 @@ novalidate>
             />
             <span class="label">Date</span>
             <span class="opt-val">Date</span>
-          </div>
+          </li>
 
-          <div class="option" role="option">
+          <li class="option" role="option">
             <input 
             id = "titre"
             class="select-option top" 
@@ -144,13 +144,13 @@ novalidate>
             
             <span class="label">Titre</span>
             <span class="opt-val">Titre</span>
-          </div>
+          </li>
 
           <div id="option-bg"></div>
-        </div>
+        </ul>
       </div>
     </form>
-  </div>
+  </div> 
 
   <div id="medias">
   </div>

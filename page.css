@@ -129,6 +129,8 @@ main .firsttag::before {
   content: "#"
 }
 
+
+
 @media screen and (min-width: 768px) {
   .main-photographes{
     background-color: #FAFAFA;
@@ -143,6 +145,8 @@ main .firsttag::before {
   .photographe-img{
     position: absolute;
     left: 80%;
+    height: 8rem;
+    width: 8rem;
    
   }
 
@@ -169,16 +173,7 @@ main .firsttag::before {
     align-self:flex-start ;
   }
 
-  .btn-form{
-
-    position: fixed;
-    /* bottom: 80%; */
-    top: 17em;
-    left: 50%;
-    border-radius: 5px;
-    height: 35px;
-    cursor: pointer;
-}
+  
   
 }
 
@@ -242,6 +237,80 @@ main .firsttag::before {
 
 /***LIGHTBOX***/
 
+
+.lightbox___container
+{
+  top : 0;
+  right: 0;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 100;
+  position: fixed;
+
+}
+
+.media_lightbox
+{
+ width: 300px;
+  border-radius:5px;
+  object-fit: cover;
+  overflow: hidden;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  margin: auto;
+}
+
+.media_lightbox_title
+{
+  color: #901C1C;
+  font-weight: 400;
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  font-size: 1.2rem;
+
+}
+
+.closeIcon
+{
+  color: #901C1C;
+  font-weight: 600;
+  font-size: 1.4em;
+  position: absolute;
+  top: 15%;
+  right: 7%;
+  cursor: pointer;
+ 
+}
+
+
+.rightIcon {
+  color: #901C1C;
+  font-weight: 900;
+  font-size: x-large;
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  cursor: pointer;
+
+}
+
+.leftIcon {
+  color: #901C1C;
+  font-weight: 900;
+  font-size: x-large;
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  cursor: pointer;
+
+}
+@media screen and (min-width: 768px) {
 .lightbox___container
 {
   top : 0;
@@ -315,51 +384,9 @@ main .firsttag::before {
   cursor: pointer;
 
 }
-
-
-@media screen and (min-width: 768px) {
-    #medias {
-      margin: 50px 100px 0 100px;
-      display: grid;
-      gap: 20px;
-      grid-template-columns: 1fr 1fr;
-      padding: 0;
-    }
-
-    
-  }
-
-@media screen and (min-width: 1100px) {
-  #medias {
-      margin: 50px 100px 0 100px;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
-
-.next
-{
-    display: none;
 }
 
 /***form***/
-
-.btn-form
-{
-    width: 170px;
-    background-color: #901C1C;
-    color: white;
-    position: fixed;
-    bottom: 1em;
-    left: 25%;
-    border-radius: 5px;
-    height: 35px;
-}
-
-#nameofphotographer {
-  margin: 1em;
-}
 
 #modal-form {
   background-color: #DB8876;
@@ -374,9 +401,27 @@ justify-content: center;
 align-items: center;
 display: none; /*important*/
 overflow: auto;
-
-
 }
+
+
+.btn-form
+{
+    width: 170px;
+    background-color: #901C1C;
+    color: white;
+    position: fixed;
+    bottom: 1em;
+    left: 25%;
+    border-radius: 5px;
+    height: 35px;
+    font-family: 'roboto', sans-serif;
+}
+
+#nameofphotographer {
+  margin: 1em;
+}
+
+
 
 
 form
@@ -388,7 +433,7 @@ form
   
 
 
-}
+
 
 }
 #nameofphotographer {
@@ -398,9 +443,8 @@ form
 
 #btnClose
 {
-    color: white;
-    
-    height: 20px;
+color: white;
+height: 20px;
 width: 20px;
 cursor: pointer;
 margin: 0;
@@ -487,9 +531,48 @@ form input{
     display: none;
 }
 
+@media screen and (min-width: 768px) {
+    #medias {
+      margin: 50px 100px 0 100px;
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      padding: 0;
+    }
+
+    
+  }
+
+@media screen and (min-width: 1100px) {
+  #medias {
+      margin: 50px 100px 0 100px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+.next
+{
+    display: none;
+}
+
+
+
  @media screen and (min-width : 768px) {
 
-  /* .form-container
+  .btn-form{
+
+    /* position: fixed; */
+    /* bottom: 80%; */
+    position: absolute;
+    top: 17em;
+    left: 50%;
+    border-radius: 5px;
+    height: 35px;
+    cursor: pointer;
+}
+  .form-container
 {
   width: 100%;
   height: 100%;
@@ -503,7 +586,7 @@ form input{
   display: none;
  
 
-} */
+}
     
 
     .dropdowns {
@@ -558,7 +641,13 @@ form input{
         /* opacity: 0; */
         cursor: pointer;
         z-index: 3;
+
       }
+
+      
+
+
+      
       
       #selected-value {
         font-size: 16px;
@@ -597,6 +686,17 @@ form input{
         font-size: 12px;
         text-align: right;
       }
+
+      #chevrons .fa-chevron-up {
+    display: none;
+      }
+      #chevrons .fa-chevron-up.visible {
+        display: block;
+          }
+      
+      #chevrons .fa-chevron-down.invisible {
+        display: none
+          }
       
       #options {
         position: absolute;
@@ -605,6 +705,8 @@ form input{
         background-color: solid #901C1C;
         border-radius: 4px;
         color: white;
+        padding: 0;
+        list-style-type: none;
       }
       
       #options-view-button:checked ~ #options {
