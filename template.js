@@ -3,7 +3,7 @@ import { Photographe} from "./class/Photographe.js"
 ////// TEMPLATE PHOTOGRAPHERS
 
 
-fetch('/data_photographers.json')
+fetch('./data_photographers.json')
     .then(data => data.json())
     .then(result => {
        //  let photographList;

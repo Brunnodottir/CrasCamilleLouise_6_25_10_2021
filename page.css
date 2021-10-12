@@ -566,7 +566,8 @@ form input{
     /* position: fixed; */
     /* bottom: 80%; */
     position: absolute;
-    top: 17em;
+    /* top: 17em; */
+    top: 27em;
     left: 50%;
     border-radius: 5px;
     height: 35px;
@@ -845,6 +846,10 @@ form input{
         align-items: center;
       }
 
+      .sum-price-likes::after {
+        content: " / jour";
+      }
+
      
     
       .total-likes {
@@ -856,4 +861,9 @@ form input{
 
       
     }
- 
+    @media screen and (min-width: 1100px) {
+      .btn-form {
+        top: 17em;
+      }
+
+    }

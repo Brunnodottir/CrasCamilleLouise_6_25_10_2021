@@ -236,7 +236,8 @@ class Lightbox {
         document.body.appendChild(container);
         this.closeIcon = document.createElement("i");
         this.closeIcon.className = "lightbox__close fas fa-times closeIcon";
-        this.closeIcon.setAttribute("aria-label", "Fermer")
+        this.closeIcon.setAttribute("aria-label", "Fermer");
+        this.closeIcon.setAttribute("tabindex", "0")
         this.closeIcon.addEventListener("click", () => {
             this.close(); // tout ce qui est déclaré dans la classe peut devenir this.something
         })
@@ -256,6 +257,7 @@ class Lightbox {
 
        
        container.append(this.closeIcon, this.leftIcon, this.rightIcon)
+       this.closeIcon.focus();
         
        this.activeMedia.renderLightbox();
        
@@ -328,8 +330,10 @@ class Lightbox {
     close() {
         // const closeBtn = document.querySelector(".closeIcon");
         const lightbox = document.querySelector(".lightbox___container");
-
-        lightbox.remove();
+        if (lightbox) {
+            lightbox.remove();
+        }
+        
         // document.removeEventListener('keyup', this.onKeyup)
         // this.closeIcon.addEventListener("click", close)
 
@@ -352,9 +356,9 @@ onKeyup(e) {
         this.next(e)
     }
 
-    // else if (e.key === 8){
-    //     this.open(e);
-    // }
+    else if (e.key === 8){
+        this.open(e);
+    }
 
     
 

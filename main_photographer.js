@@ -25,10 +25,12 @@ export function getTotalLike() {
     });
 
     return sum;
+
 }
 
 export function updateTotalLike(value){
     const totalLikesElement = document.querySelector('.total-likes__sum');
+    // totalLikesElement.innerHTML = value;
 
     totalLikesElement.textContent = value;
 }
@@ -36,7 +38,7 @@ export function updateTotalLike(value){
 
 // afficher un objet avec la key ID
 
-fetch('/data_photographers.json')
+fetch('./data_photographers.json')
     .then(data => data.json())
     .then(result => {
         const photographList = result.photographers;
@@ -111,7 +113,7 @@ fetch('/data_photographers.json')
         document.getElementById("titre").addEventListener("keydown", sortByTitle)
 
 
-        
+        updateTotalLike(getTotalLike());
 
         
         
@@ -218,5 +220,11 @@ dropbtn.addEventListener('click', () => {
 
 });
 
+document.querySelector("#select-box").addEventListener('keydown', (e) => {
+    if ( e.key === "Escape") {
+        console.log("echap")
+        document.getElementById("options").style.display = "none"
+    }
 
+})
 
