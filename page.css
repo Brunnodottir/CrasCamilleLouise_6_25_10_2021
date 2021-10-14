@@ -1,9 +1,7 @@
 body {
     font-family: 'roboto', sans-serif;
-    margin-top: 20px;
-    margin-right: 20px;
-    margin-left:20px;
-    margin-bottom: 2em;
+    padding: 0 2em;
+    max-width: 1800px;
 }
 
 header h1  a {
@@ -11,7 +9,6 @@ header h1  a {
     font-size: 2.5rem;
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;
-    margin-left: 2rem;
 }
 
 
@@ -26,6 +23,7 @@ header h1  a {
     pointer-events: none;
     margin-bottom: 2em;
 
+
 }
 
 .photographer-data
@@ -35,7 +33,7 @@ header h1  a {
   flex-direction: row;
   align-content: flex-start;
   align-items: stretch;
-  justify-content: space-around;
+  justify-content: space-between;
   text-decoration: none;
 
 }
@@ -73,8 +71,10 @@ header h1  a {
 .photographe-quote
 {
     margin-top: 0.5em;
-    font-size: 10px;
+    font-size: 0.7em;
     margin-bottom: 0;
+    color: #525252;
+    text-decoration: none;
 }
 
 .photographe-tarif
@@ -91,7 +91,7 @@ header h1  a {
     flex-wrap: wrap;
     align-content: center;
     justify-content: flex-start;
-    margin-left: 1.5em;
+    /* margin-left: 1.5em; */
 }
   main .firsttag
 {
@@ -132,6 +132,11 @@ main .firsttag::before {
 
 
 @media screen and (min-width: 768px) {
+
+  header h1 a {
+    margin :50px 100px 0 100px
+
+  }
   .main-photographes{
     background-color: #FAFAFA;
     padding: 50px;
@@ -139,6 +144,7 @@ main .firsttag::before {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
+    margin : 50px 100px 0 100px;
 
   }
 
@@ -180,7 +186,9 @@ main .firsttag::before {
 
 /*MAIN*/
 
-
+.medias {
+  margin-bottom: 5em;
+}
 
 .media
 {
@@ -311,11 +319,19 @@ main .firsttag::before {
 
 }
 @media screen and (min-width: 768px) {
+
+  .media_img,.media_video
+{
+    width: 100%;
+    height: 300px;
+    
+
+}
 .lightbox___container
 {
   top : 0;
   right: 0;
-  overflow: autogit ;
+  overflow: auto;
   width: 100%;
   height: 100%;
   background-color: #C4c4c4;
@@ -406,14 +422,20 @@ overflow: auto;
 
 .btn-form
 {
-    width: 170px;
+  display: block;
+  cursor: pointer;
+    width: max-content;
     background-color: #901C1C;
     color: white;
+    padding: 0px 10px;
+    font-size: 1.3em;
+    font-weight: 700;
     position: fixed;
     bottom: 1em;
-    left: 25%;
+    margin : 0 0 0 4em;
     border-radius: 5px;
-    height: 35px;
+    border: none;
+    height: 2em;
     font-family: 'roboto', sans-serif;
 }
 
@@ -429,6 +451,10 @@ form
   margin: 0;
   position: relative;
   height: 120vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
   background-color: #DB8876;
   
 
@@ -439,6 +465,8 @@ form
 #nameofphotographer {
   margin-top: 0;
   font-size: xx-large;
+  width: 100%;
+  margin-left: 3em;
 }
 
 #btnClose
@@ -464,6 +492,7 @@ form label{
     padding: 20px;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 form input{
@@ -503,7 +532,7 @@ form input{
       color: #e54858;
       display: block;
       margin-top: 7px;
-      margin-bottom: 7px;
+      margin-bottom: 17px;
       text-align: left;
       line-height: 0.3;
       opacity: 0;
@@ -549,6 +578,22 @@ form input{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
     }
+    #modal-form {
+      background-color: rgba(255, 255, 255, 0.5);
+      display: flex;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 15;
+      
+    }
+
+    form {
+      width: 40%;
+      height: 100vh;
+    }
 }
 
 
@@ -558,21 +603,11 @@ form input{
 }
 
 
-
  @media screen and (min-width : 768px) {
 
-  .btn-form{
 
-    /* position: fixed; */
-    /* bottom: 80%; */
-    position: absolute;
-    /* top: 17em; */
-    top: 27em;
-    left: 50%;
-    border-radius: 5px;
-    height: 35px;
-    cursor: pointer;
-}
+
+
   .form-container
 {
   width: 100%;
@@ -612,22 +647,29 @@ form input{
 
       }
       
-      #app-cover {
+      /* #app-cover {
         width: 150px;
         height: 42px;
-      }
+      } */
       
-  #dropdowns__select {
+  /* #dropdowns__select {
     width: 150px;
     height: 42px;
+  } */
+
+  #select-box {
+    width: 8em;
   }
       #select-button {
         position: relative;
-        height: 16px;
+        height: 2em;
         padding: 12px 14px;
         background-color: #901C1C;
         border-radius: 4px;
         cursor: pointer;
+        width: 100%;
+        height: 3em;
+        border: none;
       }
       
       #options-view-button {
@@ -649,21 +691,21 @@ form input{
 
 
       
-      
+/*       
       #selected-value {
         font-size: 16px;
         line-height: 1;
         margin-right: 26px;
-      }
+      } */
       
-      .option i {
+      /* .option i {
         width: 16px;
         height: 16px;
         position: absolute;
         left: 14px;
         padding: 0;
         display: none;
-      }
+      } */
       
       .option,
       .label {
@@ -712,7 +754,6 @@ form input{
       
       #options-view-button:checked ~ #options {
         border: 1px solid #901C1C;
-        border-color: solid #901C1C;
       }
       
       .option {
@@ -723,10 +764,10 @@ form input{
         background: #901C1C;
       }
       
-      #options-view-button:checked ~ #options .option i {
+      /* #options-view-button:checked ~ #options .option i {
         display: block;
         padding: 12px 0;
-      }
+      } */
       
       .label {
         display: none;
@@ -740,14 +781,14 @@ form input{
         display: block;
         padding: 12px 14px;
       }
-      
+/*       
       .s-c {
         position: absolute;
         left: 0;
         width: 100%;
         height: 50%;
         top: 0;
-      }
+      } */
       
       input[type='radio'] {
         position: absolute;
@@ -839,10 +880,9 @@ form input{
         display: flex;
         padding: 15px;
         border-radius: 5px 5px 0px 0px;
-        font-size: 24px;
+        font-size: 1.2em;
         right: 0;
         height: 20px;
-        margin-bottom: 20px;
         align-items: center;
       }
 
@@ -863,7 +903,11 @@ form input{
     }
     @media screen and (min-width: 1100px) {
       .btn-form {
-        top: 17em;
+        top: 10em;
+        height: 3em;
+        margin: 0;
+        left: 50%;
+        position: absolute;
       }
 
     }

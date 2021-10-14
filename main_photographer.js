@@ -80,6 +80,8 @@ fetch('./data_photographers.json')
 
         });
 
+        const newLightbox = new Lightbox(imageVideoList);
+
         imageVideoList.forEach(el => el.render());
         // sortbyLike
         document.getElementById("popular").addEventListener("click", sortbyLike)
@@ -150,7 +152,6 @@ function sortByTitle()
 
 
 
-git
 
 
 // DROPDOWN//
@@ -170,7 +171,7 @@ dropbtn.addEventListener('click', () => {
 document.querySelector("#select-box").addEventListener('keydown', (e) => {
     if ( e.key === "Escape") {
         console.log("echap")
-        document.getElementById("options").style.display = "none"
+        document.getElementsById("app-cover").style.display = "none"
     }
 
 })

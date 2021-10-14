@@ -24,7 +24,7 @@ class Photographe {
      
         const linkcontainer = document.createElement('a');
         linkcontainer.className = "photographer-data"
-        linkcontainer.href ="/page.html?id="+this.id;
+        linkcontainer.href ="./page.html?id="+this.id;
         linkcontainer.setAttribute('alt', this.name);
       
         const img = document.createElement('img');

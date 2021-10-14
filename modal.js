@@ -18,7 +18,7 @@ const email = document.getElementById("email");
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
 function launchModal(){
-    modal.style.display ="block";
+    modal.style.display ="flex";
 
 
 }
@@ -103,7 +103,7 @@ const isFirstValid = () => {
            return true;
          } else {
            //Une erreur est survenue
-           formData[3].setAttribute("data-error","Renseignez votre message")
+           formData[3].setAttribute("data-error","Veillez renseigner votre message")
            formData[3].setAttribute("data-error-visible", "true")
        
            return false;

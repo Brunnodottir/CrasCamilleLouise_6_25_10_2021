@@ -14,21 +14,22 @@ body{
 
  h1{
     color: #901C1C;
-    font-size: 1rem;
-    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    font-weight: 100;
 }
 
 .header_container  a 
 {
     text-decoration: none;
     color: #901C1C;
-    font-size: xxx-large;
+    font-weight: bolder;
+    font-size: 2em;
 }
 
 button.photographer__tags__tag {
   
     color: #901C1C;
-    font-size: 12px;
+    font-size: 0.7em;
     font-weight: 500;
     font-family: 'Open Sans', sans-serif;
     border : 0.5px solid #C4c4c4;
@@ -58,6 +59,9 @@ button.photographer__tags__tag:focus {
     align-items: center;
     justify-content: center;
     margin-top: 2rem;
+    margin-left: 1em;
+    margin-right: 1em;
+    align-self: baseline;
 }
 
 
@@ -201,8 +205,14 @@ main {
 
 }
 
+.header_container  a 
+{
+    
+    font-size: 3em;}
+
 .header_container h1 {
     order: 3;
+    font-size: 2em;
 }
 
 .general_tags{
