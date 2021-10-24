@@ -309,14 +309,24 @@ class Lightbox {
 
     open(){
         document.getElementsByClassName("lightbox___container").style.display = 'block';
+        document.getElementsByClassName("lightbox___container").setAttribute("aria-hidden", "false");
+        document.querySelector("main").setAttribute("aria-hidden", "true");
+
+
+
 
 
     }
 
     close() {
         const lightbox = document.querySelector(".lightbox___container");
+        
+
+
         if (lightbox) {
             lightbox.remove();
+            lightbox.setAttribute("aria-hidden", "true");
+        document.querySelector("main").setAttribute("aria-hidden", "false");
         }
         
       
