@@ -20,7 +20,7 @@
 
     <!--HEADER-->
 <header>
-    <h1><a href="index.html" tabindex="2"> Fish<i class="fas fa-camera"></i>ye</a></h1>
+    <h1><a href="index.html" tabindex="2"> Fish<i class="fas fa-camera" aria-hidden="true"></i>ye</a></h1>
 
 </header>
 
@@ -53,26 +53,26 @@ method="get"
 id="form"
 novalidate>
 <h1 id="nameofphotographer"> Contactez moi</h1>
-    <p id="btnClose"><i class="fas fa-times"></i></p>
+    <p id="btnClose"><i class="fas fa-times" aria-hidden="true" aria-labelledby="close dialog" aria-required=true></i></p>
 
     <div class="formData">
-    <label>Prénom<input id="prenom" type="text" minlength = "2"></label><br>
+    <label>Prénom<input id="prenom" type="text" minlength = "2" aria-labelledby="first-name" aria-required=true></label><br>
     <p class="error" id="error-prenom"></p>
   </div>
   <div class="formData">
 
-    <label>Nom<input id="nom" type="text"></label><br>
+    <label>Nom<input id="nom" type="text" aria-labelledby="last-name" aria-required=true></label><br>
     <p class="error" id="error-nom"></p>
   </div>
     <div class="formData">
 
-    <label>Email<input id="email" type="text"></label><br>
+    <label>Email<input id="email" type="text" aria-labelledby="email" aria-required=true></label><br>
     <p class="error" id="error-email" placeholder="myemail@email.com"></p>
     </div>
     
     <div class="formData">
 
-    <label>Votre message<input class="mymessage"  id="message" type="text" class="votre-message" placeholder="Votre message"></label><br>
+    <label>Votre message<input class="mymessage"  id="message" type="text" class="votre-message" placeholder="Votre message" aria-required=true></label><br>
     <p class="error" id="error-message"></p>
 </div>
     <button id = "btn-submit">Envoyer</button>

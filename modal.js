@@ -1,5 +1,5 @@
 // DOM ELEMENTS
-
+const main = document.querySelector("main")
 const modal = document.querySelector('#modal-form');
 const modalBtn = document.querySelectorAll('.btn-form');
 const btnClose = document.getElementById("btnClose");
@@ -19,6 +19,10 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
 function launchModal(){
     modal.style.display ="flex";
+    main.setAttribute("aria-hidden", "true")
+    modal.setAttribute("aria-hidden", "false")
+    btnClose.focus;
+
 
 
 }
@@ -27,6 +31,8 @@ function launchModal(){
 
 function closeModal() {
     modal.style.display = "none";
+    main.setAttribute("aria-hidden", "false")
+    modal.setAttribute("aria-hidden","true")
   }
   
   
