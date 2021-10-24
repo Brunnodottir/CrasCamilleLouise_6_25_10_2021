@@ -70,7 +70,8 @@
         "tags": ["fashion"],
         "likes": 62,
         "date": "2011-12-08",
-        "price": 55
+        "price": 55,
+        "alt-text": "portrait fashion de femme sportive basketball plage ensoleillée"
       },
       {
         "id": 8520927,
@@ -80,7 +81,9 @@
         "tags": ["fashion"],
         "likes": 11,
         "date": "2011-11-06",
-        "price": 55
+        "price": 55,
+        "alt-text": "portrait fashion de femme pont urbain avec combinaison jungle "
+
       },
       {
         "id": 9025895,
@@ -90,7 +93,9 @@
         "tags": ["fashion"],
         "likes": 72,
         "date": "2013-08-12",
-        "price": 55
+        "price": 55,
+        "alt-text": "portrait fashion de femme brune dans décor urbain avec motif"
+
       },
       {
         "id": 9275938,
@@ -100,7 +105,9 @@
         "tags": ["events"],
         "likes": 69,
         "date": "2018-02-22",
-        "price": 55
+        "price": 55,
+        "alt-text": "decor de cérémonie mariage élégant fleuri et romantique"
+
       },
       {
         "id": 2053494,
@@ -110,7 +117,9 @@
         "tags": ["events"],
         "likes": 2,
         "date": "2020-05-25",
-        "price": 55
+        "price": 55,
+        "alt-text": "reportage de mariage photographie de fête "
+
       },
       {
         "id": 7324238,
@@ -130,7 +139,9 @@
         "tags": ["art"],
         "likes": 24,
         "date": "2011-12-08",
-        "price": 100
+        "price": 100,
+        "alt-text": "video d'art sculpture en bois cheval anatomique"
+
       },
       {
         "id": 7502053,
@@ -140,7 +151,9 @@
         "tags": ["art"],
         "likes": 88,
         "date": "2007-05-07",
-        "price": 55
+        "price": 55,
+        "alt-text": "photo street art urbain coloré triangle géométrique portrait graphique"
+
       },
       {
         "id": 8523492,
@@ -150,7 +163,9 @@
         "tags": ["art"],
         "likes": 24,
         "date": "2018-05-05",
-        "price": 55
+        "price": 55,
+        "alt-text": "photo street art urbain coloré tunnel violet"
+
       },
       {
         "id": 75902334,
@@ -160,7 +175,9 @@
         "tags": ["art"],
         "likes": 75,
         "date": "2019-11-25",
-        "price": 55
+        "price": 55,
+        "alt-text": "street art urbain coloré pigeons amusants"
+
       },
   
       {
@@ -171,7 +188,9 @@
         "tags": ["sport"],
         "likes": 52,
         "date": "2013-02-30",
-        "price": 70
+        "price": 70,
+        "alt-text": "photos de rameurs en compétition "
+
       },
       {
         "id": 92758372,
@@ -181,7 +200,9 @@
         "tags": ["fashion"],
         "likes": 58,
         "date": "2018-07-17",
-        "price": 70
+        "price": 70,
+        "alt-text": "photos fashion couple minimaliste haute couture"
+
       },
       {
         "id": 32958383,
@@ -191,7 +212,9 @@
         "tags": ["fashion"],
         "likes": 11,
         "date": "2019-08-12",
-        "price": 70
+        "price": 70,
+        "alt-text": "photo femme élégante avec lunettes de soleil et robe rouge style urbain"
+
       },
       {
         "id": 928587383,
@@ -201,7 +224,9 @@
         "tags": ["events"],
         "likes": 2,
         "date": "2019-01-02",
-        "price": 70
+        "price": 70,
+        "alt-text": "photo de réunion projet manager brainstorming entreprise"
+
       },
       {
         "id": 725639493,
@@ -211,7 +236,9 @@
         "tags": ["events"],
         "likes": 3,
         "date": "2019-05-20",
-        "price": 70
+        "price": 70,
+        "alt-text": "photo présentation de projet produit bureaux entreprise"
+
       },
       {
         "id": 23394384,
@@ -231,7 +258,9 @@
         "tags": ["events"],
         "likes": 23,
         "date": "2018-02-22",
-        "price": 70
+        "price": 70,
+        "alt-text": "photo de musicienne chanteuse en festival style urbain"
+
       },
       {
         "id": 593834784,
@@ -241,7 +270,9 @@
         "tags": ["animals"],
         "likes": 52,
         "date": "2017-03-13",
-        "price": 70
+        "price": 70,
+        "alt-text": "photo animalière cerf majestueux avec bois dans forêt"
+
       },
       {
         "id": 83958935,
@@ -251,7 +282,9 @@
         "tags": ["animals"],
         "likes": 52,
         "date": "2016-06-12",
-        "price": 70
+        "price": 70,
+        "alt-text": "chiot mignon jouant sur la plage au coucher de soleil"
+
       },
   
       {
@@ -262,7 +295,10 @@
         "tags": ["travel"],
         "likes": 23,
         "date": "2017-03-18",
-        "price": 45
+        "price": 45,
+        "alt-text": "video de voyages montagnes majestueuses au drone"
+
+
       },
       {
         "id": 343423425,
@@ -272,7 +308,9 @@
         "tags": ["travel"],
         "likes": 101,
         "date": "2017-04-03",
-        "price": 45
+        "price": 45,
+        "alt-text": "photographie de voyages bains chauds source extérieure"
+
       },
       {
         "id": 73434243,
@@ -282,7 +320,9 @@
         "tags": ["travel"],
         "likes": 99,
         "date": "2018-04-30",
-        "price": 45
+        "price": 45,
+        "alt-text": "photographie de voyage route traversant collines"
+
       },
       {
         "id": 23425523,
@@ -292,7 +332,9 @@
         "tags": ["travel"],
         "likes": 34,
         "date": "2016-04-05",
-        "price": 45
+        "price": 45,
+        "alt-text": "photographie pont traversant la foret "
+
       },
       {
         "id": 23134513,
@@ -302,7 +344,10 @@
         "tags": ["travel"],
         "likes": 23,
         "date": "2017-03-18",
-        "price": 45
+        "price": 45,
+        "alt-text": "photographie bateau barque aventurier sur lac devant montagnes majestueuses  "
+
+
       },
       {
         "id": 92352352,
@@ -312,7 +357,9 @@
         "tags": ["portrait"],
         "likes": 66,
         "date": "2018-05-24",
-        "price": 45
+        "price": 45,
+        "alt-text": "joli portrait femme rousse souriante avec taches de rousseurs et rouge à lèvres"
+
       },
       {
         "id": 34513453,
@@ -322,7 +369,9 @@
         "tags": ["portait"],
         "likes": 52,
         "date": "2017-04-21",
-        "price": 45
+        "price": 45,
+        "alt-text": "portrait artistique noir et blanc contrasté homme moustachu"
+
       },
       {
         "id": 23523533,
@@ -332,7 +381,9 @@
         "tags": ["portait"],
         "likes": 95,
         "date": "2018-11-02",
-        "price": 45
+        "price": 45,
+        "alt-text": "portrait artistique belle femme blonde beau regard"
+
       },
       {
         "id": 525834234,
@@ -342,7 +393,9 @@
         "tags": ["portait"],
         "likes": 25,
         "date": "2019-01-02",
-        "price": 45
+        "price": 45,
+        "alt-text": "portrait réaliste homme noir et blanc cigarette beau regard"
+
       },
   
       {
@@ -353,7 +406,9 @@
         "tags": ["travel"],
         "likes": 88,
         "date": "2019-02-03",
-        "price": 45
+        "price": 45,
+        "alt-text": "photographie femme aventurière avec sac à dos seule dans la nature"
+
       },
       {
         "id": 625025343,
@@ -363,17 +418,21 @@
         "tags": ["travel"],
         "likes": 85,
         "date": "2019-04-03",
-        "price": 45
+        "price": 45,
+        "alt-text": "photographie voyage village perché coloré de pêcheurs en méditérannée"
+
       },
       {
         "id": 2525345343,
         "photographerId": 243,
-        "title": "Wednesday Potrait",
+        "title": "Wednesday Portrait",
         "image": "Portrait_Wednesday.jpg",
         "tags": ["portait"],
         "likes": 34,
         "date": "2019-04-07",
-        "price": 45
+        "price": 45,
+        "alt-text": "portrait amusant petite fille en noir et blanc avec grimace"
+
       },
       {
         "id": 2523434634,
@@ -383,7 +442,9 @@
         "tags": ["portait"],
         "likes": 63,
         "date": "2019-04-07",
-        "price": 45
+        "price": 45,
+        "alt-text": "portrait belle femme avec lunettes ambiance néon diner"
+
       },
       {
         "id": 398847109,
@@ -393,7 +454,9 @@
         "tags": ["portait"],
         "likes": 55,
         "date": "2019-06-20",
-        "price": 45
+        "price": 45,
+        "alt-text": "portrait de femme artistique en noir et blanc contrasté"
+
       },
       {
         "id": 2534342,
@@ -403,7 +466,9 @@
         "tags": ["events"],
         "likes": 25,
         "date": "2019-06-21",
-        "price": 45
+        "price": 45,
+        "alt-text": "photographie reportage de mariage décor repas élégant au bord de l'eau sur la plage"
+
       },
       {
         "id": 65235234,
@@ -413,7 +478,9 @@
         "tags": ["events"],
         "likes": 52,
         "date": "2019-06-25",
-        "price": 45
+        "price": 45,
+        "alt-text": "photographie reportage de mariage couple mariés dans la nature "
+
       },
       {
         "id": 23523434,
@@ -423,7 +490,9 @@
         "tags": ["events"],
         "likes": 77,
         "date": "2019-06-28",
-        "price": 45
+        "price": 45,
+        "alt-text": "photographie reportage de mariage couples mariés elegant décor"
+
       },
       {
         "id": 5234343,
@@ -433,7 +502,9 @@
         "tags": ["animals"],
         "likes": 142,
         "date": "2019-08-23",
-        "price": 60
+        "price": 60,
+        "alt-text": "vidéo chevaux sauvages dans la montagne"
+
       },
       {
         "id": 95234343,
@@ -443,7 +514,9 @@
         "tags": ["animals"],
         "likes": 59,
         "date": "2019-07-02",
-        "price": 60
+        "price": 60,
+        "alt-text": "joli petit oiseau coloré perché sur branche"
+
       },
   
       {
@@ -454,7 +527,9 @@
         "tags": ["travel"],
         "likes": 25,
         "date": "2019-04-03",
-        "price": 60
+        "price": 60,
+        "alt-text": "voyage au japon tour de tokyo femmes en kimono "
+
       },
       {
         "id": 2523434,
@@ -464,7 +539,9 @@
         "tags": ["travel"],
         "likes": 53,
         "date": "2019-05-06",
-        "price": 60
+        "price": 60,
+        "alt-text": "voyage à venise coucher de soleil sur les canaux avec gondoles"
+
       },
       {
         "id": 95293534,
@@ -474,7 +551,9 @@
         "tags": ["travel"],
         "likes": 33,
         "date": "2019-05-12",
-        "price": 60
+        "price": 60,
+        "alt-text": "photo de nature lac et montagne"
+
       },
       {
         "id": 356234343,
@@ -484,7 +563,9 @@
         "tags": ["travel"],
         "likes": 53,
         "date": "2019-06-20",
-        "price": 60
+        "price": 60,
+        "alt-text": "photo de vélo dans rue pavée style français et paris montmartre"
+
       },
       {
         "id": 235234343,
@@ -494,7 +575,9 @@
         "tags": ["travel"],
         "likes": 63,
         "date": "2019-06-26",
-        "price": 60
+        "price": 60,
+        "alt-text": "voyage et aventure en inde collines et porte ancienne mystérieuse"
+
       },
       {
         "id": 6234234343,
@@ -504,7 +587,9 @@
         "tags": ["architecture"],
         "likes": 52,
         "date": "2019-06-30",
-        "price": 60
+        "price": 60,
+        "alt-text": "voyage en russie église de saint petersbourg architecture typique orthodoxe"
+
       },
       {
         "id": 6525666253,
@@ -514,7 +599,9 @@
         "tags": ["architecture"],
         "likes": 63,
         "date": "2019-07-20",
-        "price": 60
+        "price": 60,
+        "alt-text": "voyage au tibet ville typique construite sur une colline himalaya"
+
       },
       {
         "id": 98252523433,
@@ -524,7 +611,9 @@
         "tags": ["architecture"],
         "likes": 88,
         "date": "2020-01-05",
-        "price": 60
+        "price": 60,
+        "alt-text": "voyage en italie tour de pise penchée"
+
       },
       {
         "id": 9259398453,
@@ -534,7 +623,9 @@
         "tags": ["architecture"],
         "likes": 57,
         "date": "2020-01-20",
-        "price": 65
+        "price": 65,
+        "alt-text": "video vue du ciel quartiers buenos aires grande ville tissu urbain avec autoroutes"
+
       },
       {
         "id": 3523523534,
@@ -544,7 +635,9 @@
         "tags": ["architecture"],
         "likes": 54,
         "date": "2020-05-05",
-        "price": 60
+        "price": 60,
+        "alt-text": "photo d'architecture immeuble coloré jolis appartements"
+
       },
   
       {
@@ -555,7 +648,9 @@
         "tags": ["sport"],
         "likes": 150,
         "date": "2018-02-30",
-        "price": 70
+        "price": 70,
+        "alt-text": "femme gymnaste acrobate suspendue tournant dans l'air"
+
       },
       {
         "id": 235234343,
@@ -565,7 +660,9 @@
         "tags": ["sport"],
         "likes": 101,
         "date": "2018-03-05",
-        "price": 65
+        "price": 65,
+        "alt-text": "femme escaladant un rocher dans la nature"
+
       },
       {
         "id": 235343222,
@@ -575,7 +672,9 @@
         "tags": ["sport"],
         "likes": 103,
         "date": "2018-03-10",
-        "price": 70
+        "price": 70,
+        "alt-text": "surfeur dans une grande vague rouleau"
+
       },
       {
         "id": 7775342343,
@@ -585,7 +684,9 @@
         "tags": ["sport"],
         "likes": 77,
         "date": "2018-04-16",
-        "price": 50
+        "price": 50,
+        "alt-text": "skieur faisant une figure saut dans l'air"
+
       },
       {
         "id": 9253445784,
@@ -595,7 +696,9 @@
         "tags": ["sport"],
         "likes": 88,
         "date": "2018-04-22",
-        "price": 65
+        "price": 65,
+        "alt-text": "femmes athletes faisant une course dans un stade"
+
       },
       {
         "id": 22299394,
@@ -605,7 +708,10 @@
         "tags": ["sport"],
         "likes": 95,
         "date": "2018-04-27",
-        "price": 70
+        "price": 70,
+        "alt-text": "skaters faisant une figure dans skate park saut en l'air"
+
+
       },
       {
         "id": 3452342633,
@@ -615,7 +721,9 @@
         "tags": ["architecture"],
         "likes": 52,
         "date": "2018-05-03",
-        "price": 75
+        "price": 75,
+        "alt-text": "photo artistique dome architecture noir et blanc visiteurs de musée"
+
       },
       {
         "id": 939234243,
@@ -625,7 +733,9 @@
         "tags": ["architecture"],
         "likes": 55,
         "date": "2018-05-10",
-        "price": 72
+        "price": 72,
+        "alt-text": "photo architecture contemporaine immeuble moderne sur l'eau"
+
       },
       {
         "id": 222959233,
@@ -635,7 +745,9 @@
         "tags": ["architecture"],
         "likes": 85,
         "date": "2018-05-15",
-        "price": 71
+        "price": 71,
+        "alt-text": "photo artistique noir et blanc architecture minimaliste et géométrique"
+
       },
       {
         "id": 965933434,
@@ -645,7 +757,9 @@
         "tags": ["architecture"],
         "likes": 66,
         "date": "2018-05-20",
-        "price": 58
+        "price": 58,
+        "alt-text": "photo artistique couleur architecture minimaliste et géométrique"
+
       },
       {
         "id": 777723343,
@@ -655,7 +769,8 @@
         "tags": ["architecture"],
         "likes": 79,
         "date": "2018-05-21",
-        "price": 80
+        "price": 80,
+        "alt-text":"photo artistique noir et blanc architecture minimaliste et géométrique"
       }
     ]
   }

@@ -185,6 +185,15 @@ button::before {
     content: "#";
 }
 
+.firsttag:active
+{
+    background-color: #901C1C;
+    color: white;
+}
+.firsttag:focus{
+    background-color: #901C1C;
+    color: white;
+}
 
 /*media queries*/
 

@@ -30,6 +30,7 @@ class Photographe {
         const img = document.createElement('img');
         img.src = "Sample Photos/Photographers ID Photos/" + this.portrait;
         img.className = "photographe-img";
+        img.setAttribute("aria-label", "alt=")
     
         img.href ="./page.html?id="+this.id;
         const infocontainer = document.createElement("div");
@@ -53,6 +54,7 @@ class Photographe {
         container.append(linkcontainer);
         const ptags = document.createElement("div");
         ptags.className = "photographe-tags";
+        ptags.setAttribute("Aria-label", "Tag");
         
 
 

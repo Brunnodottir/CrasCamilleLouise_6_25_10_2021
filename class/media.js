@@ -10,6 +10,7 @@ class Media {
         this.likes = likes;
         this.date = date;
         this.price = price;
+       
     }
 
 
@@ -49,7 +50,7 @@ class Image extends Media {
         })
 
         img.className = "media_img";
-        img.setAttribute("aria-label", "Cliquer pour agrandir");
+        img.setAttribute("aria-label", "closeupview");
         img.setAttribute("tabindex", "0");
         img.addEventListener("keydown", (e)=>{
             if (e.key === 'Enter'){
@@ -67,7 +68,7 @@ class Image extends Media {
         numberoflikes.textContent = this.likes;
         const heart = document.createElement ("i");
         heart.className = "fas fa-heart";
-        heart.setAttribute("aria-label", "cliquer pour aimer le média")
+        heart.setAttribute("aria-label", "likes")
         heart.setAttribute("tabindex", "0");
        
         heart.addEventListener("click", () => {
@@ -130,8 +131,12 @@ class Image extends Media {
                 this.handleClick();
             })
             video.className ="media_video";
-            video.setAttribute("aria-label", "Cliquer pour agrandir");
+            video.setAttribute("aria-label", "closeup view");
             video.setAttribute("tabindex", "0");
+            video.addEventListener("keydown", (e)=>{
+                if (e.key === 'Enter'){
+                    this.handleClick(e);
+            }})
 
 
             const infos = document.createElement("div");
@@ -175,6 +180,7 @@ class Image extends Media {
             const media = document.createElement('video');
             media.src = this.src;
             media.className = "media_lightbox";
+            media.controls = "true";
             const h2 = document.createElement('h2');
             h2.className = "media_lightbox_title";
             h2.textContent = this.title;
@@ -219,7 +225,7 @@ class Lightbox {
         document.body.appendChild(container);
         this.closeIcon = document.createElement("i");
         this.closeIcon.className = "lightbox__close fas fa-times closeIcon";
-        this.closeIcon.setAttribute("aria-label", "Fermer");
+        this.closeIcon.setAttribute("aria-label", "close dialog");
         this.closeIcon.setAttribute("tabindex", "0")
         this.closeIcon.addEventListener("click", () => {
             this.close();

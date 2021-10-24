@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="page.css">
+<link rel="stylesheet" href="dropdown.css">
 <link rel="icon" type="image/png" href="fisheye.png" />
 </head>
 
@@ -39,7 +40,7 @@
  
 
 <!--BOUTON CONTACT-->
-<button class="btn-form" tabindex="0">
+<button class="btn-form" aria-label="Contact me" tabindex="0">
 Contactez-moi  </button><!--CONTACT FORM-->
 
 <section id="modal-form">
@@ -81,79 +82,22 @@ novalidate>
 
 </section>
 
-<!--CONFIRMATION-->
 
 
-
-
+<div class="dropdown">
+  <span>Trier par</span>
  
-  <div class="dropdowns">
-    <p>Trier par</p>
-    <!-- <form id="app-cover"> -->
-      <div id="select-box">
-        <input type="checkbox" id="options-view-button" />
-        <button id="select-button"  aria-haspopup="listbox"
-        aria-label="Cliquer pour trier les médias" >
-          <div id="chevrons">
-            <i class="fas fa-chevron-up"></i>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-        </button>
-        <ul id="options" role="listbox" tabindex="-1"
-        >
-          <li class="option" role="option">
-          <!--add Id sur input pour tri-->
-            <input 
-            class="select-option top" 
-            id ="popular"
-            type="radio" 
-            name="platform" 
-            value="popularity" 
-            checked 
-            
-            aria-label="Cliquer pour trier par popularité"
-            />
-            <span class="label">Popularité</span>
-            <span class="opt-val">Popularité</span>
-          </li>
+  <select class="dropdown-menu" id="dropdown"  name="choice">
+    <option value="popular">Popularité</option>
+    <option value="date" selected>Date</option>
+    <option value="titre">Titre</option>
+  </select>
+</div>
 
-          <li class="option" role="option"> <!--modifier/voir Figma-->
-            <input 
-            id = "date"
-            class="select-option top" 
-            type="radio" 
-            name="platform" 
-            value="date" 
-            aria-label="Cliquer pour trier par date"
 
-            />
-            <span class="label">Date</span>
-            <span class="opt-val">Date</span>
-          </li>
 
-          <li class="option" role="option">
-            <input 
-            id = "titre"
-            class="select-option top" 
-            type="radio" 
-            name="platform" 
-            value="title" 
-            aria-label="Cliquer pour trier par titre"
-
-      />
-            
-            <span class="label">Titre</span>
-            <span class="opt-val">Titre</span>
-          </li>
-
-          <div id="option-bg"></div>
-        </ul>
-      </div>
-    <!-- </form> -->
-  </div> 
-
-  <div id="medias">
-  </div>
+  <section id="medias">
+  </section>
   <!--LIGHTBOX-->
 
 
